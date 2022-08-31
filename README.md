@@ -1,6 +1,2 @@
-# ProjectHospitalManagement
-
-# dxfh
-## xfgdfh 
-### dasg
-#### zdgf
+# Project Hospital Management
+This project is given by SBH sir 
