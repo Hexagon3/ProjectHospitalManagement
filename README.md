@@ -20,5 +20,7 @@ In a hospital there are N no of nurse in duty B no of working bed. We need to sc
 (Try to improve it in a seperate branch)
 
 ## Class or data model for Database.
-> Nurse 
-> Bed / Patient / both
+> Nurse <br>
+> Bed / Patient / both <br>
+>  Doctor (Not required in here ) <br>
+>  ...edit if you find more .... <br>
