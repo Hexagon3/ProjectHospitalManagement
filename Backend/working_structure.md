@@ -14,7 +14,8 @@ A script has been created that is Backend/environment_setup.sh this file creat t
 
 ```shell 
 git clone https://github.com/USER_NAME/ProjectHospitalManagement.git
-cd ProjectHospitalManagement
+cd ProjectHospitalManagement 
+git checkout backend-django
 bash ./Backend/environment_setup.sh
 ```
 
