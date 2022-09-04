@@ -32,7 +32,7 @@ A script has been created that is Backend/environment_setup.sh this file creat t
 > Python and bash schould be installed
 
 ```shell 
-git clone https://github.com/USER_NAME/ProjectHospitalManagement.git
+git clone https://github.com/Hexagon3/ProjectHospitalManagement.git
 cd ProjectHospitalManagement 
 git checkout backend-django
 bash ./Backend/environment_setup.sh
