@@ -1,4 +1,4 @@
-from ssl import _PasswordType
+
 from django.db import models
 
 # Create your models here.
