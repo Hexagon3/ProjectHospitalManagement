@@ -15,7 +15,7 @@ class Nurse (models.Model):
     address = models.TextField(null=True)
     license = models.CharField(max_length=12, null=True)
     contact_no = models.CharField(max_length=10, null=True)
-    __loggedin = False
+    __logged_in = False
     cost = 0
     allocated_word = None
     shift = None
@@ -28,3 +28,9 @@ class Nurse (models.Model):
 
     def verify_password(self, passwd: str):
         return (self.__password == passwd)
+
+    def is_loggedin(self):
+        return self.__logged_in
+
+    def login(self):
+        self.__logged_in = True
