@@ -15,7 +15,7 @@ class Nurse (models.Model):
     address = models.TextField(null=True)
     license = models.CharField(max_length=12, null=True)
     contact_no = models.CharField(max_length=10, null=True)
-
+    __loggedin = False
     cost = 0
     allocated_word = None
     shift = None
