@@ -4,11 +4,13 @@
     margin-right: auto;
     right: 40px;
 } */
+/* style used for body */
 body{
     background: url("doctor.jpg");
     background-repeat: no-repeat;
     background-size: 1400px;
 }
+/* style used for heading  */
 h2{
     text-align: center;
     top: 0px;
@@ -22,6 +24,7 @@ h3{
     top: 0px;
     text-align: center;
 }
+/* style used for div */
 div{
     font-family: 'Times New Roman', Times, serif;
     background-color: #55ACDA;
