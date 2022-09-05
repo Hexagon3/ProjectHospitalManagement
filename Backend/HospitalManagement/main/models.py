@@ -29,7 +29,7 @@ class Nurse (models.Model):
     def verify_password(self, passwd: str):
         return (self.__password == passwd)
 
-    def is_loggedin(self):
+    def is_logged_in(self):
         return self.__logged_in
 
     def login(self):
