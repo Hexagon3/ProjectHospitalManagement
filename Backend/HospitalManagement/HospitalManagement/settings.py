@@ -120,7 +120,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     TEMPLATE_DIR / "statics",
-    '/var/www/static/',
+
 ]
 
 # Default primary key field type
