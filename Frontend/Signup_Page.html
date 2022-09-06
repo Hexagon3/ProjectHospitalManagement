@@ -13,6 +13,7 @@
 		<h1>SIGN UP</h1>
 		<form action="/user/signup" method="POST">
 			<!-- add action and method attribute -->
+			{% csrf_token %}
 			<p>
 				<label for="firstName">First Name</label><br>
 				<input id="firstName" type="text" name="firstName" required>
