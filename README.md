@@ -24,3 +24,24 @@ In a hospital there are N no of nurse in duty B no of working bed. We need to sc
 > 2. Bed / Patient / both <br>
 > 3. Doctor (Not required in here ) <br>
 >  ...edit if you find more .... <br>
+
+
+## Environment setup and runserver
+A script has been created that is Backend/environment_setup.sh this file creat the django environment for first time 
+> **Prerequisits :**
+> Python and bash schould be installed
+
+```shell 
+git clone https://github.com/Hexagon3/ProjectHospitalManagement.git
+cd ProjectHospitalManagement 
+git checkout backend-django
+bash ./Backend/environment_setup.sh
+```
+
+To run Django server in local host the runserver scripts is also available 
+
+```shell 
+
+cd ProjectHospitalManagement
+bash ./Backend/runserver.sh
+```
