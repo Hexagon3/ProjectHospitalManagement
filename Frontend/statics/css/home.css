@@ -1,0 +1,81 @@
+/*Top Component of home page Style Sheet*/
+
+
+
+
+/*Green leaf Hospital title section*/
+
+/* Hospital Title */
+.hospital_title {
+
+    position: absolute;
+
+    width: 25%;
+    height: 10%;
+    left: 5%;
+    top: 20%;
+
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Rectangle 46 */
+.back_rectangle {
+    box-sizing: border-box;
+    display: flex;
+
+
+    background: linear-gradient(92.14deg, rgba(255, 255, 255, 0.5) 5.31%, rgba(98, 201, 50, 0) 97.73%);
+    border: 1px solid #ADA9B4;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 82.5px;
+
+}
+
+/* Vector */
+.logo {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+
+
+
+    background: #24FB60;
+    border: 5px solid #3E8251;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+/* Green Leaf Hospitals */
+.hospital_name {
+    position: absolute;
+    display: flex;
+    position: relative;
+    top: 2%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 58px;
+
+    color: #000000;
+
+}
+
+/* Your trust our wealth */
+.hospital_tagline {
+    position: absolute;
+    display: flex;
+    position: relative;
+    top: 2%;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    text-align: center;
+
+}
+
+/*Green leaf Hospital title section*/
+/*End*/
