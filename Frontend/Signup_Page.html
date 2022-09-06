@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +11,7 @@
 <body>
 	<div class="container">
 		<h1>SIGN UP</h1>
-		<form action="/signup" method="POST">
+		<form action="/user/signup" method="POST">
 			<!-- add action and method attribute -->
 			<p>
 				<label for="firstName">First Name</label><br>
@@ -36,7 +38,7 @@
 			<h1><input type="Submit" value="Create Account"></h1>
 		</form>
 
-		<link rel="stylesheet" href="statics/css/Signup_Page.css">
+		<link rel="stylesheet" href="{% static 'css/Signup_Page.css' %}">
 		<!-- update this style sheet path by relative path of the css file 
 		and change na name of css file  -->
 </body>
