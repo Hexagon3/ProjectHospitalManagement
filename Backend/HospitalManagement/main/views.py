@@ -12,3 +12,10 @@ def home(req):
         <p> Design the ui of home page and then it will looks better </p>
         """
     )
+
+
+def signup(req):
+    if req.method == 'POST':
+        return HttpResponse("h1")
+
+    return render(req, "Signup_Page.html")
