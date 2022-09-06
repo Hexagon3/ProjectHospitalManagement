@@ -1,13 +1,14 @@
 html {
-	
-	background-image: url(img3.jpg);
+
+	background-image: url(../images/img3.jpg);
+	/*Update this url by relative path of the image img3*/
 	background-size: cover;
 	display: inline-block;
 	background-repeat: no-repeat;
-  	background-position: left; 
-  	padding-top: 30px;
+	background-position: left;
+	padding-top: 30px;
 	padding-bottom: 30px;
-  	
+
 
 }
 
@@ -45,23 +46,22 @@ p {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-radius: 25px;
-	border:  solid black;
+	border: solid black;
 }
 
 
 .field-icon {
-  float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
+	float: right;
+	margin-left: -25px;
+	margin-top: -25px;
+	position: relative;
+	z-index: 2;
 }
 
-input[type="Submit"]
-{
+input[type="Submit"] {
 	width: 40%;
 	display: round block;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	background-color: seagreen;
 	color: white;
 	padding: 5px 0px;
@@ -70,13 +70,13 @@ input[type="Submit"]
 	font-weight: bold;
 	border-radius: 25px;
 }
-input[type="Submit"]:focus,
-input[type="Submit"]:hover
 
-{
+input[type="Submit"]:focus,
+input[type="Submit"]:hover {
 	border: 2px solid white;
 	background-color: black;
 }
+
 body {
-	font-family: Arial,serif;
+	font-family: Arial, serif;
 }
