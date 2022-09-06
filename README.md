@@ -2,8 +2,7 @@
 # Branch and their worker (Temporary Notes) 
  ## sinchan --working with fronted-HCJ
  ## ankita --working with loginpage
-    First marge loginpage and loginpage-update 
-    then go for work
+ First marge loginpage and loginpage-update then go for work
  ## Aritra --working with backend-django
  
 
