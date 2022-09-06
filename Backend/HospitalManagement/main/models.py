@@ -7,11 +7,11 @@ from django.db import models
 class Nurse (models.Model):
     # def __init__(self, *args, **kwargs) -> None:
     # #     super().__init__(*args, **kwargs)
-    name = models.CharField(max_length=20, default="Nurse")
+    name = models.CharField(max_length=20)
     profile_pic = models.ImageField(null=True)
     bio = models.TextField(null=True)
     email = models.EmailField(null=True)
-    __password: str
+    __password: models.CharField(max_length=30)
     address = models.TextField(null=True)
     license = models.CharField(max_length=12, null=True)
     contact_no = models.CharField(max_length=10, null=True)
@@ -36,11 +36,11 @@ class Nurse (models.Model):
         self.__logged_in = True
 
 
-class Doctor(models.Model):
-    name = models.CharField(max_length=20, default="Nurse")
-    profile_pic = models.ImageField(null=True)
-    # bio = models.TextField(null=True)
-    email = models.EmailField(null=True)
+# class Doctor(models.Model):
+#     name = models.CharField(max_length=20, default="Nurse")
+#     profile_pic = models.ImageField(null=True)
+#     # bio = models.TextField(null=True)
+#     email = models.EmailField(null=True)
 
-    def __str__(self):
-        return "Dr."+self.name
+#     def __str__(self):
+#         return "Dr."+self.name

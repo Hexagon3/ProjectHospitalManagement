@@ -55,7 +55,9 @@ TEMPLATE_DIR = BASE_DIR.parent.parent / "Frontend"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [  # Template Directory
+            TEMPLATE_DIR,
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,11 +120,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = [  # Static Directory all static files related to main app is placed here
     TEMPLATE_DIR / "statics",
 
 ]
-
+MEDIA_ROOT = BASE_DIR/"media"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
