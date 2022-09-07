@@ -134,7 +134,7 @@
     opacity: 0;
     transition: 0.5;
     transition-property: transform, opacity;
-
+    /* display: none; */
 }
 
 .menu-item .sub-menu-button:hover .sub-menu {
@@ -218,13 +218,21 @@
         background: rgba(255, 255, 255, .1);
         border-radius: 5px;
         overflow: hidden;
-
+        display: none;
 
     }
 
     .menu-item:hover .sub-menu {
         transform: translateX(10px);
 
+    }
+
+    .menu-item>a:hover {
+        /* color: #62b8e0; */
+        display: block;
+        /*Nav bar menu item hover colour */
+        background-color: #6d5a9b;
+        transition: 0.5s;
     }
 
     .menu-item .sub-menu .sub-item {

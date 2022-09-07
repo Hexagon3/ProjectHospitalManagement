@@ -1,7 +1,7 @@
 <div class="top-container">
 
+    <link rel="stylesheet" href="./statics/css/topbar.css">
     <div class="top1">
-        <link rel="stylesheet" href="./statics/css/title_bar.css">
 
         <header class="title_bar">
             <!-- logo -->
@@ -18,7 +18,11 @@
     </div>
 
     <div class="top2">
-        <link rel="stylesheet" href="./statics/css/navbar.css">
+        <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
+        <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- nav bar begin  -->
         <header class="navigation-header">
             <!-- logo -->
@@ -104,7 +108,16 @@
             </div>
         </header>
 
-
+        <scripts type="text/javascript">
+            //jquery for toggle drop down
+            $(document).ready(function()
+            {
+            $(".sub-menu-button").click( function(){
+            $(this).next(".sub-menu").slidToggle();
+            }
+            );
+            });
+        </scripts>
 
 
 
