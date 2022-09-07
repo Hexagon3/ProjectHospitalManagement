@@ -1,5 +1,5 @@
 .title_bar {
-    z-index: 100;
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +12,7 @@
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+    /*Title bar Background colour */
     background: #2ca0ff;
     /* box-shadow: 0 5px 25p rgba(100, 100, 100, 0.7); */
     transition: 0.6s;
@@ -19,6 +20,7 @@
 }
 
 .title_text {
+    /*Title bar text colour*/
     color: white;
     font-size: 1.8em;
     font-weight: 700;
@@ -28,8 +30,16 @@
 }
 
 .profile_icon {
-    z-index: 10;
+    z-index: 4;
     position: fixed;
     right: 5%;
+    margin: .1%;
 
+}
+
+.profile_icon img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }

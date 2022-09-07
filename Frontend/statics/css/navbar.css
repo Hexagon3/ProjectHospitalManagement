@@ -49,6 +49,7 @@
 
 /* Anchore button of dropdown */
 .menu-item>a {
+    /*Navbar menu item text Colour*/
     color: #ffffff;
     font-size: 1em;
     text-decoration: none;
@@ -61,7 +62,9 @@
 .menu-item>a:hover {
     /* color: #62b8e0; */
     display: block;
-    /*Nav bar menu item hover colour */
+    /*Nav bar menu item hover text Colour */
+    color: #ffffff;
+    /*Nav bar menu item hover background Colour */
     background-color: #8a5a9b;
     transition: 0.5s;
 }
@@ -71,7 +74,8 @@
 /* Drop Down  */
 .menu-item .sub-menu {
     position: absolute;
-    background: #b697ff;
+    /* Dropdown non selected option Colour */
+    background: #904cb4;
     width: 200px;
     top: 34px;
     line-height: 20px;
@@ -103,7 +107,7 @@
 }
 
 .menu-item .sub-menu .sub-item a {
-    /*Dropdown item text colour */
+    /*Dropdown item text Colour */
     color: #ffffff;
     font-size: 1em;
     font-weight: 700px;
@@ -113,7 +117,10 @@
 }
 
 .menu-item .sub-menu .sub-item:hover {
-    background-color: aqua;
+    /*Dropdown selected item text colour */
+    color: red;
+    /*Dropdown selected item background colour */
+    background-color: rgb(44, 129, 255);
 }
 
 .menu-item .sub-menu .sub-item:last-child:hover {
@@ -185,7 +192,7 @@
     }
 
     .menu-item .sub-menu .sub-item a:hover {
-        color: #b697ff;
+        color: #f5f5f6;
         transition: 0.3s;
     }
 
