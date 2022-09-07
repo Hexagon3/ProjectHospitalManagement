@@ -1,5 +1,7 @@
 
 # Branch and their worker (Temporary Notes) 
+ ## Digdorshee -- panding
+ please creat your branch and edit this file
  ## sinchan --working with fronted-HCJ
  ## ankita --working with loginpage
  ## Aritri --working with nurseBottom
