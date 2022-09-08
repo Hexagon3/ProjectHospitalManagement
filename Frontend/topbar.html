@@ -1,6 +1,7 @@
 <div class="top-container">
 
     <link rel="stylesheet" href="./statics/css/topbar.css">
+    <!-- Title bar  -->
     <div class="top1">
 
         <header class="title_bar">
@@ -16,19 +17,27 @@
         <a class="profile_icon" href="#/"><img src="./statics/images/profile_icon.png" height="40" width="40"> </a>
 
     </div>
-
+    <!-- nav bar -->
     <div class="top2">
         <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
         <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!-- nav bar begin  -->
         <header class="navigation-header">
             <!-- logo -->
             <a class="logo" href="#/"><img src="./statics/images/logo.png" height="40" width="40"> </a>
+
             <!-- Search Bar  -->
-            <!-- Implement later  -->
+            <div class="search-form" method="GET">
+                <from action="/search=">
+                    <input type="text" placeholder="Search here" name="search_bar" class="search-bar">
+                    <button type="submit">
+                        <img src="./statics/images/search_icon.png" height="20px" width="20px">
+                    </button>
+                </from>
+            </div>
+
+            <!-- Search Bar End  -->
 
 
             <!-- menu bar  -->

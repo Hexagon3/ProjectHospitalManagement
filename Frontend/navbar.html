@@ -1,13 +1,23 @@
-<div class="top">
+<div class="top2">
     <link rel="stylesheet" href="./statics/css/navbar.css">
-    <div class="title_bar">
+    <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
 
-    </div>
+    <!-- nav bar begin  -->
     <header class="navigation-header">
         <!-- logo -->
         <a class="logo" href="#/"><img src="./statics/images/logo.png" height="40" width="40"> </a>
+
         <!-- Search Bar  -->
-        <!-- Implement later  -->
+        <div class="search-form" method="GET">
+            <from action="/search=">
+                <input type="text" placeholder="Search here" name="search_bar" class="search-bar">
+                <button type="submit">
+                    <img src="./statics/images/search_icon.png" height="20px" width="20px">
+                </button>
+            </from>
+        </div>
+
+        <!-- Search Bar End  -->
 
 
         <!-- menu bar  -->
@@ -15,7 +25,7 @@
             <ul class="menu">
 
                 <!-- display menu item Branch-->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">Branch <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -29,7 +39,7 @@
                     </a>
                 </li>
                 <!-- base display menu item Achievements -->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">Achievements <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -40,7 +50,7 @@
                     </a>
                 </li>
                 <!--  display menu item Career-->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">Career <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -51,7 +61,7 @@
                     </a>
                 </li>
                 <!--  display menu item Department-->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">Department <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -62,7 +72,7 @@
                     </a>
                 </li>
                 <!--  display menu item About-->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">About <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -73,7 +83,7 @@
                     </a>
                 </li>
                 <!-- display menu item Admin-->
-                <li class="menu-item">
+                <li class="menu-item" onclick="open_submenu(this)">
                     <a class="sub-menu-button" href="#">Admin <i class="arrow down"> </i>
 
                         <!-- Drop Down list  -->
@@ -87,8 +97,7 @@
         </div>
     </header>
 
-
-
+    <script src="./statics/js/navbar.js"></script>
 
 
 </div>
