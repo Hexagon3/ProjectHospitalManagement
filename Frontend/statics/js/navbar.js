@@ -15,3 +15,10 @@ function open_submenu(element) {
 
 
 }
+
+
+function sidebar_open(element) {
+
+    element.classList.toggle("change");
+    document.getElementsByClassName("navigations-list").style.display = "block"
+}

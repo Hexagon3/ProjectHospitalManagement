@@ -29,8 +29,8 @@
             <a class="logo" href="#/"><img src="./statics/images/logo.png" height="40" width="40"> </a>
 
             <!-- Search Bar  -->
-            <div class="search-form" method="GET">
-                <from action="/search=">
+            <div class="search_bar">
+                <from action="/search=" method="GET" class="search_form">
                     <input type="text" placeholder="Search here" name="search_bar" class="search-bar">
                     <button type="submit">
                         <img src="./statics/images/search_icon.png" height="20px" width="20px">
@@ -41,6 +41,18 @@
             <!-- Search Bar End  -->
 
 
+            <!-- Menubar icon when screen is small  -->
+            <!-- Begin -->
+            <!-- <div class="menu-icon"> -->
+            <div class="side_bar_active" onclick="sidebar_open(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <!-- </div> -->
+
+            <!-- end -->
             <!-- menu bar  -->
             <div class="navigations-list">
                 <ul class="menu">
