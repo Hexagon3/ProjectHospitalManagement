@@ -9,3 +9,12 @@ Whatever you think write it down in this file and write all documentation int th
 
 
 
+# URL map 
+## Type 1
+Profile page -> domain/profile/user_code
+Home Page --> domain/           (Before Login)
+          --> domain/user_code  (After Login)
+## Type 2 
+Profile page -> domain/profile/
+Home Page -> domain/
+         --> domain/
