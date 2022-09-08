@@ -48,6 +48,7 @@
 
 /* Anchore button of dropdown */
 .menu-item>a {
+    /* Menu Item Text Colour */
     color: #ffffff;
     height: 2.4em;
     font-size: 1.3em;
@@ -61,7 +62,7 @@
 .menu-item>a:hover {
     /* color: #62b8e0; */
     display: block;
-    /*Nav bar menu item hover colour */
+    /*Nav bar menu item background hover Colour  */
     background-color: #ff0303;
     transition: 0.5s;
 }
@@ -71,6 +72,7 @@
 /* Drop Down  */
 .menu-item .sub-menu {
     position: absolute;
+    /* Dropdown menu item background Colour  */
     background: #b697ff;
     width: 200px;
     top: 34px;
@@ -105,7 +107,7 @@
 }
 
 .menu-item .sub-menu .sub-item a {
-    /*Dropdown item text colour */
+    /*Dropdown item text Colour */
     color: #ffffff;
     font-size: 1em;
     font-weight: 700px;
@@ -115,6 +117,10 @@
 }
 
 .menu-item .sub-menu .sub-item:hover {
+
+    /*Dropdown item text hover Colour */
+    color: #ffffff;
+    /*Dropdown item background hover Colour */
     background-color: aqua;
 }
 
@@ -147,6 +153,7 @@
 
         position: fixed;
         display: block;
+        /* Responsive Navbar (sidebar right) backgrounf Colour */
         background: #6d5a9b;
         min-width: 350px;
         height: 100vh;
@@ -189,7 +196,9 @@
         /* color: #62b8e0; */
         display: inline;
 
-        /*Nav bar menu item hover colour */
+        /*Nav bar menu item hover Colour */
+        /* this should be same as Navbar (sidebar right) background  */
+
         background-color: #6d5a9b;
         transition: 0.5s;
     }
@@ -203,6 +212,7 @@
     }
 
     .menu-item .sub-menu .sub-item a:hover {
+        /*responsive nav bar( side bar ) Submenu Hover Colour */
         color: #b697ff;
         transition: 0.3s;
     }
