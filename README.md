@@ -4,8 +4,8 @@
  please creat your branch and edit this file
  ## sinchan --working with fronted-HCJ
  ## ankita --working with loginpage
- ## Aritri --working with nurseBottom
- ## Aritra --working with backend-django
+ ## Aritri --working with nurseBottom /home-top
+ ## Aritra --working with backend-django / home-top
  
 
 
