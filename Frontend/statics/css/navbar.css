@@ -22,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
     /*Nav Bar Background Colour*/
-    background: #6d5a9b;
+    background: #7b52ec;
     /* box-shadow: 0 5px 25p rgba(100, 100, 100, 0.7); */
     transition: 0.6s;
 
@@ -63,7 +63,7 @@
     /* color: #62b8e0; */
     display: block;
     /*Nav bar menu item background hover Colour  */
-    background-color: #ff0303;
+    background-color: #4e16e6;
     transition: 0.5s;
 }
 
@@ -121,7 +121,7 @@
     /*Dropdown item text hover Colour */
     color: #ffffff;
     /*Dropdown item background hover Colour */
-    background-color: aqua;
+    background-color: #4e16e6;
 }
 
 .menu-item .sub-menu .sub-item:last-child:hover {
