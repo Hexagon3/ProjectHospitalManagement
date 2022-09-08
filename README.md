@@ -3,7 +3,7 @@
  ## Digdorshee -- pending
  please creat your branch and edit this file
  ## sinchan --working with fronted-HCJ
- ## ankita --working with loginpage
+ ## ankita --working with loginpage-update / (home-footer -- create this first from main branch)
  ## Aritri --working with nurseBottom /home-top
  ## Aritra --working with backend-django / home-top
  
