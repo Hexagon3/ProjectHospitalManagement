@@ -37,7 +37,7 @@ def signup(req):
         new_nurse.save()
         return HttpResponse("Registration Success")
 
-    return render(req, "Signup_Page.html")
+    return render(req, "member_login.html")
 
 
 def nurse_profile(req, nurse):
@@ -56,3 +56,7 @@ def doctor_profile(req, nurse):
 
         '''
     )
+
+
+def patient_registration(req):
+    return render(req, "patient_registration.html")

@@ -7,7 +7,7 @@ body {
     justify-content: right;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Jost' ,sans-serif;
+    font-family: 'Jost', sans-serif;
     background-image: url(img3.jpg);
     background-size: cover;
 }
@@ -22,7 +22,7 @@ body {
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;
     margin-left: 750px;
-	margin-right: auto;
+    margin-right: auto;
     display: round block;
 }
 
@@ -82,33 +82,35 @@ button {
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background: rgb(3, 60, 93);
 }
 
 /* the login form */
 
-.login{
+.login {
     height: 460px;
     background: rgb(171, 241, 201);
     border-radius: 60% / 10%;
     transform: translateY(-180px);
     transition: .8s ease-in-out;
 }
-.login label{
+
+.login label {
     color: black;
     transform: scale(.6);
 }
 
 /* transition of login and signup */
 
-#chk:checked ~ .login{
+#chk:checked~.login {
     transform: translateY(-500px);
 }
-#chk:checked ~ .login label{
+
+#chk:checked~.login label {
     transform: scale(1);
 }
-#chk:checked ~ .signup label{
+
+#chk:checked~.signup label {
     transform: scale(.6);
 }
-
