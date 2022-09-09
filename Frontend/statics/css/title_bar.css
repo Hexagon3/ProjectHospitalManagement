@@ -16,6 +16,7 @@
     background: #35C3BB;
     /* box-shadow: 0 5px 25p rgba(100, 100, 100, 0.7); */
     transition: 0.6s;
+    overflow: hidden;
 
 }
 
@@ -42,4 +43,26 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+@media(max-width:1022px) {
+    .title_text {
+        font-size: 1.7em;
+        letter-spacing: 1px;
+
+    }
+
+
+}
+
+@media(max-width:720px) {
+    .title_text {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width:480px) {
+    .title_text {
+        font-size: 1.4em;
+    }
 }
