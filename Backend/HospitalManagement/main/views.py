@@ -5,13 +5,12 @@ from .models import Nurse
 
 
 def home(req):
-    return HttpResponse(
-        """
+    context = {"msg": """
         <h1>Project : Hospital Management System </h1>
         <h2> Sub Project : Nurse Scheduling in bed </h2>
         <p> Design the ui of home page and then it will looks better </p>
-        """
-    )
+        """}
+    return render(req, "home.html", context=context)
 
 
 def login(req):

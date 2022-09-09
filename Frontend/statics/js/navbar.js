@@ -23,6 +23,7 @@ function sidebar_open(element) {
     // s[0].style["transition"] = "0.5s";
     if (sidebar_active) {
         sidebar_active = false;
+        // s[0].style.transform = 'translate(355px, -20px)'
         s[0].style.transform = 'translate(355px, -20px)'
 
     }

@@ -1,18 +1,22 @@
+<!-- nav bar -->
+
+{% load static %}
 <div class="top2">
-    <link rel="stylesheet" href="./statics/css/navbar.css">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
     <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
 
     <!-- nav bar begin  -->
     <header class="navigation-header">
         <!-- logo -->
-        <a class="logo" href="#/"><img src="./statics/images/logo.png" height="40" width="40"> </a>
+        <a class="logo" href="#/"><img src="{% static 'images/logo.png' %}" height="40" width="40"> </a>
 
         <!-- Search Bar  -->
-        <div class="search-form" method="GET">
-            <from action="/search=">
-                <input type="text" placeholder="Search here" name="search_bar" class="search-bar">
-                <button type="submit">
-                    <img src="./statics/images/search_icon.png" height="20px" width="20px">
+        <div class="search_bar">
+            <from action="/search=" method="GET" class="search_form">
+                <input type="text" placeholder="Search here" name="search_bar" class="search-bar-input">
+                <button type="submit" class="search-button">
+                    <!-- <img src="./statics/images/search_icon.webp" height="20px" width="20px"> -->
+                    Search
                 </button>
             </from>
         </div>
@@ -20,6 +24,18 @@
         <!-- Search Bar End  -->
 
 
+        <!-- Menubar icon when screen is small  -->
+        <!-- Begin -->
+        <!-- <div class="menu-icon"> -->
+        <div class="side_bar_active" onclick="sidebar_open(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- </div> -->
+
+        <!-- end -->
         <!-- menu bar  -->
         <div class="navigations-list">
             <ul class="menu">
@@ -97,7 +113,7 @@
         </div>
     </header>
 
-    <script src="./statics/js/navbar.js"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
 
 
 </div>
