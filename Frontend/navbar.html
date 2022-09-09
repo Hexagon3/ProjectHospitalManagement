@@ -4,7 +4,13 @@
 <div class="top2">
     <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
     <!-- <link rel="stylesheet" href="./statics/css/navbar.css"> -->
-
+    <div class="side_button">
+        <div class="side_bar_active" onclick="sidebar_open(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
     <!-- nav bar begin  -->
     <header class="navigation-header">
         <!-- logo -->
@@ -27,17 +33,14 @@
         <!-- Menubar icon when screen is small  -->
         <!-- Begin -->
         <!-- <div class="menu-icon"> -->
-        <div class="side_bar_active" onclick="sidebar_open(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+
 
         <!-- </div> -->
 
         <!-- end -->
         <!-- menu bar  -->
         <div class="navigations-list">
+
             <ul class="menu">
 
                 <!-- display menu item Branch-->
