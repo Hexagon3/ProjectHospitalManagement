@@ -1,14 +1,16 @@
-/* img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    right: 40px;
-} */
+img{
+    border-radius: 50%;
+    padding-left: 10px;
+}
 /* style used for body */
+*{
+    margin: 0%;
+    padding: 0%;
+}
 body{
-    background: url("doctor.jpg");
+    background: url("../images/doctor.jpg");
     background-repeat: no-repeat;
-    background-size: 1400px;
+    background-size: 1380px;
 }
 /* style used for heading  */
 h2{
@@ -25,63 +27,154 @@ h3{
     text-align: center;
 }
 /* style used for div */
-div{
+header{
     font-family: 'Times New Roman', Times, serif;
     background-color: #55ACDA;
     border: 2px solid black;
     padding: 0px;
     margin: 0%;
 }
-.right{
-    text-align: right;
-    border: none;
-    padding: 0px;
-    margin: 0%;
+/* .spl{
+    height: 100%;
+    width: 50%;
+    position:fixed;
+    z-index: 1;
+    top: 20%;
+    overflow-x: hidden;
+    padding-top: 20px;
+} */
+.main{
+    color: aliceblue;
 }
-#main{
+.about{
+    color: aliceblue;
+}
+.home{
+    color: aliceblue;
+}
+.update{
+    color: aliceblue;
+}
+.notification{
+    color: aliceblue;
+}
+.contact{
+    color: aliceblue;
+}
+.leftH{
     font-family:'Times New Roman', Times, serif;
     font-size: large;
     font-weight: bold;
-    padding: 2px;
+    height: 30px;
+    left:3%;
+}
+.rightH{
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    right:0%;
+    text-align: right;
 }
 .container{
     width: 500px;
     border: 2px solid purple;
     position: relative;
     top: 30px;
+    left: 20px;
     
 }
 .item{
     border: 3px solid grey;
-    margin: 10px 3px;
+    margin: 5px 3px;
     padding: 10px 3px;
     background: rgb(236, 203, 203);
 }
 .a2{
-    text-align: right;
+    text-align: center;
     font-weight: bold;
     font-size: 150%;
-    top: 200px;
+    top: 100px;
+    padding: 20px;
 }
 .a3{
     font-style: italic;
-    text-align: right;
+    font-weight: bold;
+    text-align: center;
     font-size: 100%;
 }
 .a4{
     text-align:center;
     font-weight: bold;
     font-size: 200%;
+    padding: 20px;
 }
 .a5{
     text-align: center;
     font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
     color: black;
     background-color: brown;
     height: 25px;
-    width: 200px;
+    width: 150px;
+    border-radius: 25px;
     border: 2px solid black;
 }
 .a6{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.a7{
+    text-align:center;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 20px;
+}
+.a8{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color: rgb(68, 236, 26);
+    height: 25px;
+    width: 150px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+.split{
+    height: 100%;
+    width: 50%;
+    position:fixed;
+    z-index: 1;
+    top: 10%;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.left{
+    left:3%;
+    border-radius: 20%;
+}
+.right{
+    right:0%;
+    text-align: right;
+}
+.centered img{
+    width: 50px;
+    border-radius: 30%;
+}
+.centered{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
