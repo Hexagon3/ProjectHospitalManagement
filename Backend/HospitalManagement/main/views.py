@@ -10,10 +10,6 @@ def home(req):
     return render(req, "home.html", context=context)
 
 
-def login(req):
-    pass
-
-
 def signup(req):
     if req.method == 'POST':
         firdt_name = req.POST.get("firstName")
@@ -37,19 +33,19 @@ def signup(req):
     return render(req, "member_login.html")
 
 
-def nurse_profile(req, nurse):
+def nurse_profile(req, username):
     return HttpResponse(
-        '''
-        <h1> Nurse Profile </h1>
 
-        '''
+        f'<h1> Nurse Profile {username}</h1>'
+
+
     )
 
 
 def doctor_profile(req, nurse):
     return HttpResponse(
         '''
-        <h1> Doctor Profile </h1>
+        <h1> Nurse Profile </h1>
 
         '''
     )
