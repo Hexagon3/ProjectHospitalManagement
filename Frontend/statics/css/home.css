@@ -1,0 +1,43 @@
+.blank {
+    height: 88px;
+}
+
+.right {
+    width: 50%;
+    float: right;
+    background-color: aqua;
+
+}
+
+.right .right-right {
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right .right-right div {
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.login-button {
+    position: relative;
+    float: center;
+    background-color: rgb(46, 137, 255);
+    border-radius: 30px;
+    padding: 0px 20px;
+    left: 100px;
+
+    margin: 5px;
+}
+
+
+.right .right-right a {
+    color: white;
+    font-size: 1.3em;
+}

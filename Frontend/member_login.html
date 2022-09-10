@@ -10,18 +10,23 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main1">
         <input type="checkbox" id="chk" aria-hidden="true">
 
         <!-- Signup form -->
 
         <div class="signup">
             <form>
-                <label for="chk" aria-hidden="true">SIGN UP</label>
-                <input type="text" name="txt" placeholder="User Name" required="">
-                <input type="email" name="email" placeholder="abc@gmail.com" required="">
-                <input type="Password" name="pswd" placeholder="Password" required="">
-                <input type="Password" name="pswd" placeholder="Confirm Password" required="">
+                <label class="label" for="chk" aria-hidden="true">SIGN UP</label>
+                <input class="input" type="text" name="txt" placeholder="User Name" required="">
+                <input class="input" type="email" name="email" placeholder="abc@gmail.com" required="">
+                <input class="input" type="Password" name="pswd" placeholder="Password" required="">
+
+                <input class="input" type="Password" name="pswd" placeholder="Confirm Password" required="">
+                <div class="chcek">
+                    <input type="checkbox" name="checkbox1" required>
+                    <label for="chk" aria-hidden="true" class="check-label">Terms and conditions</label>
+                </div>
                 <button>SIGN UP</button>
             </form>
         </div>
@@ -30,10 +35,10 @@
 
         <div class="login">
             <form>
-                <label for="chk" aria-hidden="true">LOGIN</label>
-                <input type="email" name="email" placeholder="abc@gmail.com" required="">
-                <input type="Password" name="pswd" placeholder="Password" required="">
-                <button>LOGIN</button>
+                <label class="label" for="chk" aria-hidden="true">LOGIN</label>
+                <input class="input" type="email" name="email" placeholder="abc@gmail.com" required="">
+                <input class="input" type="Password" name="pswd" placeholder="Password" required="">
+                <button type="submit">LOGIN</button>
             </form>
         </div>
     </div>

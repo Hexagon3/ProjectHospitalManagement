@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
 Home page
 {% endblock title %}
@@ -10,5 +10,25 @@ Home page
 {% include "./titlebar.html" %}
 {% include "./navbar.html" %}
 
-{{ msg }}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<div class="blank"></div>
+<div class="right">
+    <div class="right-right">
+
+        <div class="login-signup">
+            {% if user.logedin %}
+            <div class="login-button">
+                <a href="/user/signup">Signup/Login</a>
+            </div>
+            {% else %}
+            <div class="login-button">
+                <a href="/user/profile">Profile</a>
+            </div>
+            {% endif %}
+        </div>
+
+
+    </div>
+</div>
+
 {% endblock content %}

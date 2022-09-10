@@ -5,11 +5,8 @@ from .models import Nurse
 
 
 def home(req):
-    context = {"msg": """
-        <h1>Project : Hospital Management System </h1>
-        <h2> Sub Project : Nurse Scheduling in bed </h2>
-        <p> Design the ui of home page and then it will looks better </p>
-        """}
+    user = {'logedin': True}
+    context = {'user': user}
     return render(req, "home.html", context=context)
 
 

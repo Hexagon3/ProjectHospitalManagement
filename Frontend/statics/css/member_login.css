@@ -14,15 +14,15 @@ body {
 
 /* container of signup and login */
 
-.main {
+.main1 {
     width: 500px;
     height: 550px;
-    background: white;
+    background: rgb(255, 255, 255);
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 5px 20px 50px #000;
-    margin-left: 750px;
-    margin-right: auto;
+    margin: auto;
+
     display: round block;
 }
 
@@ -38,18 +38,19 @@ body {
     height: 100%;
 }
 
-label {
+.label {
     color: black;
     font-size: 2.3em;
     justify-content: center;
     display: flex;
-    margin: 60px;
+    margin-top: 35px;
+    margin-bottom: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: .5s ease-in-out;
 }
 
-input {
+.input {
     width: 60%;
     height: 20px;
     background: #e0dede;
@@ -97,8 +98,24 @@ button:hover {
 }
 
 .login label {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
     color: black;
     transform: scale(.6);
+
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.check-label {
+    font-size: 1em;
 }
 
 /* transition of login and signup */
