@@ -2,12 +2,14 @@
 .all
 {
     padding-top: 20%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 /* boredr of the frame */
 #alpha
 {
     overflow: hidden;
-    border: 5px solid rgb(0, 0, 0); 
+    border: 5px solid rgb(86, 119, 209); 
     border-radius: 5%;
 }
 
@@ -34,6 +36,7 @@
     border-radius: 50%;
     height: 50px;
     width: auto;
+
 }
 
 /* button will darker when clicked */
