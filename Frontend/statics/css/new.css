@@ -1,3 +1,8 @@
+
+.all
+{
+    padding-top: 20%;
+}
 /* boredr of the frame */
 #alpha
 {
@@ -17,7 +22,7 @@
 }
 
 /* body color */
-body
+.all
 {
     background-image: linear-gradient(rgb(106,146,249),rgba(82,147,161,0.6194),rgba(199,242,105,0.96));
 }
