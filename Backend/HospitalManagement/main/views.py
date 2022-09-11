@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Nurse
+from .models import Nurse, User
+from django.contrib.auth import authenticate, login, logout
 # Create your views here.
 
 
@@ -12,31 +13,37 @@ def home(req):
 
 def signup(req):
     if req.method == 'POST':
-        firdt_name = req.POST.get("firstName")
-        last_name = req.POST.get("lastName")
-        email = req.POST.get("email")
-
-        # passwd2 = req.POST.get('password2')
-
-        passwd1 = req.POST.get('password1')
-        for nurse in Nurse.objects.all():
-            if nurse.email == email:
-                return render(req, "Signup_Page.html")
-        new_nurse = Nurse(
-            name=firdt_name+' '+last_name,
-            email=email,
-        )
-        new_nurse.set_password(passwd1)
-        new_nurse.save()
+        try:
+            username = req.POST.get("username")
+            email = req.POST.get("email")
+            passwd2 = req.POST.get('passwd2')
+            passwd1 = req.POST.get('passwd1')
+            if (passwd1 == passwd2):
+                n1 = Nurse(username=username, email=email, name=username)
+                n1.user = User.objects.create_user(
+                    username=username, email=email, password=passwd2)
+        except:
+            email = req.POST.get("email")
+            passwd = req.POST.get('password')
+            nurse = Nurse.objects.get(email=email)
+            user = authenticate(nurse.username, passwd)
+            login(req, user)
+        #     render(req, "Signup_Page.html")
+        # new_nurse = Nurse(
+        #     name=firdt_name+' '+last_name,
+        #     email=email,
+        # )
+        # new_nurse.set_password(passwd1)
+        # new_nurse.save()
         return HttpResponse("Registration Success")
 
     return render(req, "member_login.html")
 
 
-def nurse_profile(req, username):
+def nurse_profile(req):
     return HttpResponse(
 
-        f'<h1> Nurse Profile {username}</h1>'
+        f'<h1> Nurse Profile </h1>'
 
 
     )

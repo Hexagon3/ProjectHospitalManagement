@@ -4,7 +4,7 @@ urlpatterns = [
     path('', home),    # Domainname.com/
     path('user/signup', signup),
     # domain_name.com/user/signup
-    path('user/nurse/profile/<str:username>', nurse_profile),
+    path('user/nurse/profile/', nurse_profile),
     # domain_name.com/user/login
 
     path('patient/registration', patient_registration),

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig'
+    'main.apps.MainConfig',
+    # 'UserAccounts.apps.UseraccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'HospitalManagement.wsgi.application'
 
-
+# AUTH_USER_MODEL = "django.contrib.auth.models.User"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
