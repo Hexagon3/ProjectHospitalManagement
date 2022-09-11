@@ -1,3 +1,12 @@
+
+# Branch and their worker (Temporary Notes) 
+ ## sinchan --working with fronted-HCJ
+ ## ankita --working with loginpage
+ First marge loginpage and loginpage-update then go for work
+ ## Aritra --working with backend-django
+ 
+
+
 # Project Hospital Management
 This project is given by SBH sir 
 
@@ -30,12 +39,12 @@ In a hospital there are N no of nurse in duty B no of working bed. We need to sc
 A script has been created that is Backend/environment_setup.sh this file creat the django environment for first time 
 > **Prerequisits :**
 > Python and bash schould be installed
-
+#### For Windows user 
 ```shell 
 git clone https://github.com/Hexagon3/ProjectHospitalManagement.git
 cd ProjectHospitalManagement 
 git checkout backend-django
-bash ./Backend/environment_setup.sh
+bash ./windows_environment_setup.sh
 ```
 
 To run Django server in local host the runserver scripts is also available 
@@ -43,5 +52,20 @@ To run Django server in local host the runserver scripts is also available
 ```shell 
 
 cd ProjectHospitalManagement
-bash ./Backend/runserver.sh
+bash ./windows_runserver.sh
+```
+#### For Linux or unix user 
+```shell 
+git clone https://github.com/Hexagon3/ProjectHospitalManagement.git
+cd ProjectHospitalManagement 
+git checkout backend-django
+bash ./linux_environment_setup.sh
+```
+
+To run Django server in local host the runserver scripts is also available 
+
+```shell 
+
+cd ProjectHospitalManagement
+bash ./linux_runserver.sh
 ```
