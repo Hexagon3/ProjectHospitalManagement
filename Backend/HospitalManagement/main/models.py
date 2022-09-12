@@ -30,9 +30,17 @@ class Nurse (models.Model):
 
 
 class Patient(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=64)
     address = models.TextField(null=True)
+    phone = models.CharField(max_length=12, null=True)
+    email = models.CharField(max_length=30, null=True)
+    adhar_no = models.CharField(max_length=16, null=True)
+    gender = models.CharField(max_length=10, null=True)
+    word_id = models.IntegerField(null=True)
+    room_no = models.IntegerField()
 
+    def __str__(self):
+        return self.name
     # class Doctor(models.Model):
     #     name = models.CharField(max_length=20, default="Nurse")
     #     profile_pic = models.ImageField(null=True)
@@ -41,3 +49,11 @@ class Patient(models.Model):
 
     #     def __str__(self):
     #         return "Dr."+self.name
+
+
+class Word(models.Model):
+    MAX_BED = models.IntegerField()
+    active_bed = models.IntegerField()
+
+    def __srt__(self):
+        return self.id
