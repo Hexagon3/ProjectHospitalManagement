@@ -16,7 +16,7 @@
         <!-- Signup form -->
 
         <div class="signup">
-            <form method="post" action="nurse/profile/">
+            <form method="post">
                 {% csrf_token %}
                 <label class="label" for="chk" aria-hidden="true">SIGN UP</label>
                 <input class="input" type="text" name="username" placeholder="User Name" required="">
@@ -28,14 +28,14 @@
                     <input type="checkbox" name="checkbox1" required>
                     <label for="chk" aria-hidden="true" class="check-label">Terms and conditions</label>
                 </div>
-                <button>SIGN UP</button>
+                <button type="submit">SIGN UP</button>
             </form>
         </div>
 
         <!-- Login form -->
 
         <div class="login">
-            <form method="post" action="nurse/profile/">
+            <form method="post">
                 {% csrf_token %}
                 <label class="label" for="chk" aria-hidden="true">LOGIN</label>
                 <input class="input" type="email" name="email" placeholder="abc@gmail.com" required>

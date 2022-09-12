@@ -1,0 +1,115 @@
+.blank {
+    height: 88px;
+}
+
+
+
+.title_img {
+    position: relative;
+}
+
+.login_field {
+    display: flex;
+    /* background: red; */
+    width: 100%;
+    width: 100%;
+
+}
+
+
+.name_right {
+    position: relative;
+    display: flex;
+    width: 50%;
+    /* float: right; */
+    left: 50%;
+    padding: 0 0px;
+    /* background-color: aqua; */
+
+}
+
+
+
+
+
+.login-signup {
+    position: relative;
+    /* right: 20%; */
+    left: 50%;
+    background-color: rgb(46, 137, 255);
+    border-radius: 30px;
+    padding: 0px 20px;
+    margin-top: 5px;
+}
+
+
+.name_right .login-button a {
+    color: white;
+    font-weight: 700;
+    font-size: 1.23em;
+}
+
+
+.title_field {
+
+    /* background-color: brown; */
+    display: flex;
+
+    margin: 0 3%;
+}
+
+.title_field .name_left {
+    /* background-color: aquamarine; */
+    display: block;
+    width: 100%;
+    /* background-color: rgb(134, 164, 140); */
+    /* float: left; */
+}
+
+.title_field .name_left a {
+    display: block;
+
+
+}
+
+.title_field .name_right a {
+    position: relative;
+    display: block;
+    left: 40%;
+    top: 50%;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.title_field .name_right {
+    /* background-color: aquamarine; */
+    position: relative;
+    display: block;
+    width: 50%;
+    /* float: right; */
+    left: 0%;
+    padding: 0 0px;
+    /* background-color: rgb(58, 26, 238); */
+
+}
+
+
+/* .title_field .name_left img {
+    height: 40%;
+    width: 40%;
+} */
+
+/* .no1 {
+    display: block;
+    float: right;
+} */
+
+.welcome {
+    background-color: brown;
+    width: 800px;
+}
+
+/* .name_green_leaf .no1 {
+    height: 50%;
+    width: 50%;
+} */
