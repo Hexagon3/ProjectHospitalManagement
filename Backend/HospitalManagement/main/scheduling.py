@@ -1,3 +1,4 @@
+from .models import Word, Patient
 
 
 def surse_schedule():

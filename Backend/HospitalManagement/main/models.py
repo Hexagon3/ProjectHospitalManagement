@@ -36,7 +36,7 @@ class Patient(models.Model):
     email = models.CharField(max_length=30, null=True)
     adhar_no = models.CharField(max_length=16, null=True)
     gender = models.CharField(max_length=10, null=True)
-    word_id = models.IntegerField(null=True)
+    word_id = models.IntegerField()
     room_no = models.IntegerField()
 
     def __str__(self):
