@@ -1,21 +1,18 @@
-
-.all
-{
+.all {
     padding-top: 20%;
     padding-left: 7%;
     padding-right: 7%;
 }
+
 /* boredr of the frame */
-#alpha
-{
+#alpha {
     overflow: hidden;
-    border: 5px solid rgb(86, 119, 209); 
+    border: 5px solid rgb(86, 119, 209);
     border-radius: 5%;
 }
 
 /* time of each image with size and position */
-#alpha figure
-{
+#alpha figure {
     position: relative;
     width: 500%;
     margin: 0;
@@ -24,14 +21,12 @@
 }
 
 /* body color */
-.all
-{
-    background-image: linear-gradient(rgb(106,146,249),rgba(82,147,161,0.6194),rgba(199,242,105,0.96));
+.all {
+    background-image: linear-gradient(rgb(106, 146, 249), rgba(82, 147, 161, 0.6194), rgba(199, 242, 105, 0.96));
 }
 
 /* /button images */
-.btn img
-{
+.btn .sliding_imag {
     border: 5px solid black;
     border-radius: 50%;
     height: 50px;
@@ -40,8 +35,7 @@
 }
 
 /* button will darker when clicked */
-.btn:hover
-{
+.btn:hover {
     background-color: gray;
 }
 
@@ -64,51 +58,49 @@
     transition: all 0.15s ease;
 } */
 
-#alpha figure img
-{
+#alpha .figure1 .sliding_image {
     float: left;
     width: 20%;
 }
 
-@keyframes alpha  {
-    0%
-    {
+@keyframes alpha {
+    0% {
         left: 0%;
     }
-    15%
-    {
+
+    15% {
         left: 0%;
     }
-    20%
-    {
+
+    20% {
         left: -100%;
     }
-    35%
-    {
+
+    35% {
         left: -100%;
     }
-    40%
-    {
+
+    40% {
         left: -200%;
     }
-    55%
-    {
+
+    55% {
         left: -200%;
     }
-    60%
-    {
+
+    60% {
         left: -300%;
     }
-    75%
-    {
+
+    75% {
         left: -300%;
     }
-    80%
-    {
-        left:-400%;
+
+    80% {
+        left: -400%;
     }
-    100%
-    {
+
+    100% {
         left: -400%;
     }
 }
