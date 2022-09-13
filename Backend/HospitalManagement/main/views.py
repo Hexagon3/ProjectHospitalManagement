@@ -54,12 +54,8 @@ def logout_session(req: HttpRequest):
 
 
 def nurse_profile(req):
-    return HttpResponse(
-
-        f'<h1> Nurse Profile </h1>'
-
-
-    )
+    return render(req, 'Bio.html')
+    # return HttpResponse(f'<h1> Nurse Profile </h1>')
 
 
 def doctor_profile(req, nurse):

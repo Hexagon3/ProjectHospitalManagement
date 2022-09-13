@@ -1,4 +1,10 @@
 /* Aritra tui header chenge korle h3 r header class er css gulo muche dibi */
+
+.blank {
+    height: 88px;
+}
+
+
 .h3 {
     background-color: aqua;
     height: 30px;

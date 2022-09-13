@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,28 +7,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./statics/css/Bio.css">
-    <link rel="stylesheet" href="./statics/css/Identity.css">
+    <link rel="stylesheet" href="{% static 'css/Bio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/title_bar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Identity.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <title>Nurse_Profile</title>
+
 </head>
 
 <body>
+    <div class="blank"></div>
+
     <!-- HEADER -->
-    <div class="h3">Project Hospital Management</div>
+    <!-- <div class="h3">Project Hospital Management</div>
     <header class="header">
         <div class="leftH">
             <p class="main">Green Leaf Hospitals</p>
-        </div>
-        <!-- the right class is used for writing the different icons bar -->
-        <div class="rightH">
+        </div> -->
+    <!-- the right class is used for writing the different icons bar -->
+    <!-- <div class="rightH">
             <a href="#" class="home">Home</a>
             <a href="#" class="update">Update</a>
             <a href="#" class="notification">Notification</a>
             <a href="#" class="contact">Contact</a>
             <a href="#" class="about">About</a>
         </div>
-    </header>
-
+    </header> -->
+    {% include 'titlebar.html' %}
+    {% include 'navbar.html' %}
     <!-- The p is used for writing the different sub parts of the page -->
     <div class="container">
         <div class="left">
@@ -35,11 +43,11 @@
                     <img src="./statics/images/profile_pic.png" alt="Avatar woman" height="220px" width="220px">
                 </div>
                 <div class="right forCenter">
-                   <div>
+                    <div>
                         <p class="a5">Staff Nurse</p>
                         <p class="a4">Aditi Kaur</p>
                         <p class="a6">License : 569205650545</p>
-                   </div>
+                    </div>
                 </div>
             </div>
             <div class="lower forCenter">
@@ -154,4 +162,5 @@
         </div>
     </div>
 </body>
+
 </html>
