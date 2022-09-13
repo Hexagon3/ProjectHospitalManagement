@@ -1,0 +1,105 @@
+/* Aritra tui header chenge korle h3 r header class er css gulo muche dibi */
+.h3 {
+    background-color: aqua;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #55ACDA;
+    border: 2px solid black;
+}
+
+.container {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.upper {
+    height: 45vh;
+    width: 50vw;
+}
+
+.lower {
+    height: 45vh;
+    width: 50vw;
+}
+
+.forCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box {
+    height: auto;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.a2 {
+    text-align: right;
+    font-weight: bold;
+    font-size: 150%;
+    top: 100px;
+    padding: 10px;
+}
+
+.a3 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: right;
+}
+
+.a4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    padding: 20px;
+}
+
+.a5 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color: rgb(217, 94, 94);
+    height: 25px;
+    width: 150px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.a6 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.a7 {
+    text-align: right;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 20px;
+}
+
+.a8 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color: rgb(68, 236, 26);
+    height: 25px;
+    width: 150px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
