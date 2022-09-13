@@ -6,8 +6,6 @@ from django.contrib.auth.models import User
 
 
 class Nurse (models.Model):
-    # def __init__(self, *args, **kwargs) -> None:
-    # #     super().__init__(*args, **kwargs)
     username = models.CharField(max_length=15)
     name = models.CharField(max_length=30)
     profile_pic = models.ImageField(null=True)
@@ -21,9 +19,10 @@ class Nurse (models.Model):
         on_delete=models.CASCADE,
         primary_key=True,
     )
-    cost = 0
-    allocated_word = None
-    shift = None
+    cost = models.IntegerField(default=0)
+    allocated_word = models.IntegerField(default=-1)
+    shift = models.CharField(max_length=64)
+    last_update_date = models.DateField(null=True)
 
     def __str__(self) -> str:
         return "nurse : "+self.name
