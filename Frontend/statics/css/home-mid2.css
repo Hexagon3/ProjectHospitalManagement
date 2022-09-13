@@ -1,12 +1,21 @@
 .heading {
     border-radius: 30px;
-    height: 30px;
-    width: 150px;
+    height: 5%;
+    width: 15%;
     background-color: cadetblue;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
+
+.doctors_hub {
+    margin: 0 5%;
+}
+
+.department {
+    margin: 0 5%;
+}
+
 .container1 {
     display: grid;
     /* background-color: rgb(227, 74, 217); */
@@ -16,6 +25,7 @@
     grid-column-gap: 20px;
     grid-template-columns: auto auto auto auto auto;
 }
+
 /* .pic1 {
     background-color: rgb(218, 120, 120);
     border: 2px solid black;
@@ -29,7 +39,8 @@
     grid-column-gap: 20px;
     grid-template-columns: auto auto auto auto;
 }
-img {
+
+.profile_image {
     border: 2px solid black;
     border-radius: 25px;
     display: block;
@@ -37,6 +48,7 @@ img {
     margin-right: auto;
 
 }
+
 .name {
     font-size: 25px;
     font-weight: bold;

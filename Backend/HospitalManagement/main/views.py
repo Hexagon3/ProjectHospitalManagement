@@ -1,7 +1,7 @@
 from urllib import request
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
-from .models import Nurse, User
+from .models import Nurse, User, Patient
 from django.contrib.auth import authenticate, login, logout
 # Create your views here.
 
@@ -72,4 +72,31 @@ def doctor_profile(req, nurse):
 
 
 def patient_registration(req):
+    if req.method == "POST":
+        name = req.POST.get("name")
+        phone = req.POST.get("phone")
+        email = req.POST.get("email")
+        adhar = req.POST.get("adhar")
+        address = req.POST.get("address")
+        female = req.POST.get("female")
+        male = req.POST.get("male")
+        other = req.POST.get("other")
+        if male == True:
+            gender = 'male'
+        elif female == True:
+            gender = 'female'
+        else:
+            gender = 'other'
+
+        patient = Patient(
+            name=name,
+            phone=phone,
+            email=email,
+            adhar_no=adhar,
+            address=address,
+            gender=gender
+
+        )
+        patient.save()
+        # return redirect("/")
     return render(req, "patient_registration.html")
