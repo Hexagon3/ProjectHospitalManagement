@@ -2,7 +2,7 @@
 #all
 {
     position: fixed;
-    height: 70%;
+    height: 700px;
     width: 600px;
     background-position: 40%;
     background-image: url(./images/white-round-office-clock-showing-three-o-isolated-background-blank-pm-time-174748111.jpg);
@@ -18,12 +18,15 @@
     text-align: center;
     border-radius: 10%;
 }
-.text{
+#top_text{
     background-color: aqua;
     font-size: 46px;
     border: 5px solid rgb(41, 141, 133);
-    border-radius: 30%;
+    border-radius: 5%;
     font-weight: bold;
+    width: 70%;
+    left: 30%;
+    margin-left: 15%;
 }
 #names
 {
@@ -34,6 +37,7 @@
     background-color: rgba(248, 195, 125, 0.842);
     text-align: center;
     margin-top: 10%;
+    border-radius: 10%;
     position: absolute;
 }
 #word
@@ -41,21 +45,27 @@
     background-color: rgba(61, 211, 119, 0.993);
     border: 5px solid rgba(0, 128, 0, 0.336);
     font-weight: bold;
+    font-size: 46px;
+    border: 5px solid rgb(41, 141, 133);
+    border-radius: 10%;
+    font-weight: bold;
+    width: 70%;
+    left: 30%;
 }
 #name
 {
-    background-color: rgba(177, 179, 62, 0.788);
-    border: 5px solid rgb(201, 186, 57);
+    background-color: rgba(220, 223, 75, 0.788);
+    border: 5px solid rgb(133, 124, 51);
     font-size: 46px;
     font-weight: bold;
     margin-top: 30%;
-    border-radius: 15%;
+    border-radius: 5%;
 }
-.main
+/* .main
 {
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: aquamarine;
     z-index: 1001;
-}
+} */
