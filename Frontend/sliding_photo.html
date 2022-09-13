@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<div class="slide_container">
+
+    <div class="all">
+        <div id="alpha">
+            <figure class="figure1">
+                <!-- <input type="radio" name="slide" id="1st image">
+            <input type="radio" name="slide" id="2nd image">
+            <input type="radio" name="slide" id="3rd image">
+            <input type="radio" name="slide" id="4th image">
+            <input type="radio" name="slide" id="5th image"> -->
+
+                <img class='slide_image' src="{% static 'images/slid_img_1.jpg' %}" alt="1st image">
+                <img class='slide_image' src="{% static 'images/slid_img_2.jpg' %}" alt="2nd image">
+                <img class='slide_image' src="{% static 'images/slid_img_3.jpg' %}" alt="3rd image">
+                <img class='slide_image' src="{% static 'images/slid_img_4.jpg' %}" alt="4th image">
+                <img class='slide_image' src="{% static 'images/slid_img_5.jpg' %}" alt="5th image">
+            </figure>
+        </div>
+        <!-- <div class="dots">
+        <label for="ist image"></label>
+        <label for="2nd image"></label>
+        <label for="3rd image"></label>
+        <label for="4th image"></label>
+        <label for="5th image"></label>
+    </div> -->
+
+        <!-- button attachment -->
+
+        <button class="btn" onclick="prev()"><img src="C:\Users\User\Downloads\images.png" alt="left shift"></button>
+        <button class="btn" onclick="next()"><img src="C:\Users\User\Downloads\images (1).png"
+                alt="right shift"></button>
+
+        <!-- javscript attachment -->
+
+        <!-- <script src="mail.js"></script> -->
+    </div>
+</div>

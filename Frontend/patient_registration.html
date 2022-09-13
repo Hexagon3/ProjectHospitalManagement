@@ -1,0 +1,101 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Patient Database</title>
+    <link rel="stylesheet" href="{% static 'css/patient_registration.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="table">
+            <form method="post" class="from">
+                {% csrf_token %}
+                <label for="chk" aria-hidden="true">PATIENT'S FORM</label>
+                <table>
+                    <!-- name row -->
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Name" name="name" required="">
+                        </td>
+                    </tr>
+                    <!-- phone row -->
+                    <tr>
+                        <td>
+                            Phone Number:
+                        </td>
+                        <td>
+                            <input type="phone" name="phone" placeholder="9867******" required="">
+                        </td>
+                        <!-- adhar row -->
+                    <tr>
+                        <td>
+                            Aadhar Number:
+                        </td>
+                        <td>
+                            <input type="aadhar" name="adhar" placeholder="XXXX XXXX XXXX " required="">
+                        </td>
+                    </tr>
+                    <!-- email row -->
+                    <tr>
+                        <td>
+                            Email Id:
+                        </td>
+                        <td>
+                            <input type="email" name="email" placeholder="example1@gmail.com" required="">
+                        </td>
+                    </tr>
+                    <!-- gender row -->
+                    <tr>
+                        <td>
+                            Gender:
+                        </td>
+                        <td>
+                            <input type="radio" name="male">Male
+                            <input type="radio" name="female">Female
+                            <input type="radio" name="other">Others
+                        </td>
+                    </tr>
+                    <!-- D.O.B row -->
+                    <tr>
+                        <td>
+                            Date of Birth:
+                        </td>
+                        <td>
+                            <input type="date" required="" name="date">
+                        </td>
+                    </tr>
+                    <!-- address row -->
+                    <tr>
+                        <td>
+                            Address:
+                        </td>
+                        <td>
+                            <textarea rows="5" col="17" placeholder="Address" name="address" required=""></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <!-- buttons -->
+                <div class="button">
+                    <button type="submit">SUBMIT</button>
+                    <br><br>
+                    <button>RESET</button>
+                </div>
+            </form>
+            <!-- div table close     -->
+        </div>
+        <!-- div main close -->
+    </div>
+
+</body>
+
+</html>

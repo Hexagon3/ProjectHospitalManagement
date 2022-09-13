@@ -1,0 +1,44 @@
+{% load static%}
+<div class="blank"></div>
+<div class="icon-container">
+    <div class="login_field">
+        <div class="name_right">
+            {% if not user.logedin %}
+            <div class="login-signup">
+
+                <div class="login-button">
+                    <a href="/user/signup">Signup/Login</a>
+                </div>
+            </div>
+            {% else %}
+            <div class="login-signup">
+                <div class="login-button">
+                    <a href="/user/logout">Logout</a>
+                </div>
+            </div>
+            <div class="login-signup">
+                <div class="login-button">
+                    <a href="/user/nurse/profile">Profile</a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <div class="title_field">
+
+
+        <div class="name_left">
+
+            <a class="name_green_leaf" href="#/"><img src="{% static 'images/title.png' %}" height="100" width="500">
+            </a>
+        </div>
+        <div class="name_right">
+            <!-- <p class="welcome">Welcome to </p> -->
+            <a class="no1" href="#/">
+                <img src="{% static 'images/no1.png' %}" height="72" width="280">
+            </a>
+        </div>
+    </div>
+</div>

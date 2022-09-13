@@ -1,0 +1,106 @@
+.all {
+    padding-top: 20%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+/* boredr of the frame */
+#alpha {
+    overflow: hidden;
+    border: 5px solid rgb(86, 119, 209);
+    border-radius: 5%;
+}
+
+/* time of each image with size and position */
+#alpha figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 10s alpha infinite;
+}
+
+/* body color */
+.all {
+    background-image: linear-gradient(rgb(106, 146, 249), rgba(82, 147, 161, 0.6194), rgba(199, 242, 105, 0.96));
+}
+
+/* /button images */
+.btn .sliding_imag {
+    border: 5px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: auto;
+
+}
+
+/* button will darker when clicked */
+.btn:hover {
+    background-color: gray;
+}
+
+
+/* .dots
+{
+    display: flex;
+    justify-content: center;        //image nev bar
+    margin: 5ps;
+}
+
+
+.dots label
+{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;             //image nev bar
+    border:solid black;
+    cursor: pointer;
+    transition: all 0.15s ease;
+} */
+
+#alpha .figure1 .sliding_image {
+    float: left;
+    width: 20%;
+}
+
+@keyframes alpha {
+    0% {
+        left: 0%;
+    }
+
+    15% {
+        left: 0%;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    35% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    55% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
