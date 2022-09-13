@@ -2,6 +2,7 @@
     padding-top: 20%;
     padding-left: 7%;
     padding-right: 7%;
+    background-image: linear-gradient(rgb(106, 146, 249), rgba(82, 147, 161, 0.6194), rgba(199, 242, 105, 0.96));
 }
 
 /* boredr of the frame */
@@ -18,11 +19,6 @@
     margin: 0;
     left: 0;
     animation: 10s alpha infinite;
-}
-
-/* body color */
-.all {
-    background-image: linear-gradient(rgb(106, 146, 249), rgba(82, 147, 161, 0.6194), rgba(199, 242, 105, 0.96));
 }
 
 /* /button images */

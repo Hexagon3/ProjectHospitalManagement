@@ -8,7 +8,7 @@
 }
 
 footer{
-  position: fixed;
+  /* position: fixed; */
   bottom: 0px;
   width: 100%;
   background: rgb(137, 135, 135);
