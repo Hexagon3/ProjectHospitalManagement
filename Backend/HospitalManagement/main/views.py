@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from .models import Nurse, User, Patient
@@ -53,8 +54,27 @@ def logout_session(req: HttpRequest):
 
 
 def nurse_profile(req):
+
+    active_nurse = Nurse.objects.get(username=req.user.username)
+    print(active_nurse.username)
+    print(active_nurse.name)
+    print(active_nurse.profile_pic)
+    print(active_nurse.bio)
+    print(active_nurse.email)
+    print(active_nurse.address)
+    print(active_nurse.license)
+    print(active_nurse.contact_no)
     return render(req, 'Bio.html')
     # return HttpResponse(f'<h1> Nurse Profile </h1>')
+
+
+def show_schedule(req):
+    return render(req, "pop_up_new.html")
+
+
+def nurse_set_info(req):
+    # return render("  ")
+    return HttpRequest("Nurse Details")
 
 
 def doctor_profile(req, nurse):

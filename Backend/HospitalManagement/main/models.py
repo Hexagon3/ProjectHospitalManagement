@@ -23,6 +23,7 @@ class Nurse (models.Model):
     allocated_word = models.IntegerField(default=-1)
     shift = models.CharField(max_length=64)
     last_update_date = models.DateField(null=True)
+    queue_order = models.IntegerField(default=0)
 
     def __str__(self) -> str:
         return "nurse : "+self.name

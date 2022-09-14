@@ -40,7 +40,7 @@
         <div class="left">
             <div class="upper">
                 <div class="left forCenter">
-                    <img src="./statics/images/profile_pic.png" alt="Avatar woman" height="220px" width="220px">
+                    <img src="{% static 'images/profile_pic.png' %}" alt="Avatar woman" height="220px" width="220px">
                 </div>
                 <div class="right forCenter">
                     <div>
@@ -53,7 +53,7 @@
             <div class="lower forCenter">
                 <div class="Box">
                     <h2>Bio</h2>
-                    <p>I've been in nursing school at [university] for the past few years and just recentlypassed the
+                    <p>I've been in nursing school at [university] for the past few years and just recently passed the
                         NCLEX-RN exam. During school, I worked part-time as an LPN in a rehab facility during swing
                         shift. I
                         loved the variety of skills I used and learned while working with patients gaining their
@@ -66,7 +66,7 @@
                 <div>
                     <div>
                         <p class="a3">
-                            <img src="./statics/images/green_leaf2.png" alt="Avatar woman" width="30px"
+                            <img src="{% static 'images/green_leaf2.png' %}" alt="Avatar woman" width="30px"
                                 height="30px">GREEN
                             LEAF HOSPITAL
                         </p>
@@ -75,14 +75,19 @@
                         <p class="a7">Your trust our wealth</p>
                     </div>
                     <div>
-                        <p class="a2">No. <img src="./statics/images/1.png" alt="Avatar woman" height="40px"
+                        <p class="a2">No. <img src="{% static '/images/1.png' %}" alt="Avatar woman" height="40px"
                                 width="20px">
                             Private Hospital</p>
                     </div>
                 </div>
             </div>
             <div class="lower forCenter">
-                <p><button class="a8">Suhedule</button></p>
+                <!-- <from class="schedule_button_form" method="post" action="schedule"> -->
+
+                <a href="/user/nurse/schedule" class="a8">Schedule</a>
+                <a href="/user/nurse/setprofile" class="a8">Set Profile</a>
+
+                <!-- </from> -->
             </div>
         </div>
     </div>
