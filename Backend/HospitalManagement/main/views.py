@@ -38,11 +38,16 @@ def signup(req):
         except:
             email = req.POST.get("email")
             passwd = req.POST.get('password')
-            nurse = Nurse.objects.get(email=email)
+            try:
+                nurse = Nurse.objects.get(email=email)
+            except:
+                return render(req, "member_login.html")
             user = nurse.user  # authenticate(request)
-            login(req, user)
-
-        return HttpResponse("Registration Success")
+            if user.check_password(passwd):
+                login(req, user)
+                return redirect("/")
+            else:
+                return render(req, "member_login.html")
 
     return render(req, "member_login.html")
 
@@ -53,8 +58,21 @@ def logout_session(req: HttpRequest):
 
 
 def nurse_profile(req):
-    return render(req, 'Bio.html')
+
+    active_nurse = Nurse.objects.get(username=req.user.username)
+    context = {"nurse": active_nurse}
+    return render(req, 'Bio.html', context=context)
     # return HttpResponse(f'<h1> Nurse Profile </h1>')
+
+
+def show_schedule(req):
+
+    return render(req, "pop_up_new.html")
+
+
+def nurse_set_info(req):
+    # return render("  ")
+    return HttpRequest("Nurse Details")
 
 
 def doctor_profile(req, nurse):
