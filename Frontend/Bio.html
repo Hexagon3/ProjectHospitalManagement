@@ -45,19 +45,15 @@
                 <div class="right forCenter">
                     <div>
                         <p class="a5">Staff Nurse</p>
-                        <p class="a4">Aditi Kaur</p>
-                        <p class="a6">License : 569205650545</p>
+                        <p class="a4">{{nurse.name}}</p>
+                        <p class="a6">License : {{nurse.license}}</p>
                     </div>
                 </div>
             </div>
             <div class="lower forCenter">
                 <div class="Box">
                     <h2>Bio</h2>
-                    <p>I've been in nursing school at [university] for the past few years and just recently passed the
-                        NCLEX-RN exam. During school, I worked part-time as an LPN in a rehab facility during swing
-                        shift. I
-                        loved the variety of skills I used and learned while working with patients gaining their
-                        independence back. Now that I have my RN is one .</p>
+                    <p>{{nurse.bio}}</p>
                 </div>
             </div>
         </div>
@@ -101,7 +97,7 @@
                         Name:
                     </div>
                     <div class="rigt">
-                        Aditi Kaur
+                        {{nurse.name}}
                     </div>
                 </div>
 
@@ -140,7 +136,7 @@
                         Ph no.
                     </div>
                     <div class="rigt">
-                        0123456789
+                        {{nurse.contact_no}}
                     </div>
                 </div>
 
@@ -149,9 +145,7 @@
                         Address:
                     </div>
                     <div class="rigt">
-                        Aaron Larson
-                        123 center Ln, Plymouth
-                        MN 55441, United States
+                        {{nurse.address}}
                     </div>
                 </div>
 
@@ -160,7 +154,7 @@
                         E-mail
                     </div>
                     <div class="rigt">
-                        aditikaur@email.com
+                        {{nurse.email}}
                     </div>
                 </div>
             </div>
