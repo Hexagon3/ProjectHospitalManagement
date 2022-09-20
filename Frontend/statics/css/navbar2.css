@@ -1,0 +1,145 @@
+.ul_of_link {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar_base {
+    position: sticky;
+    top: 48px;
+    background-color: blueviolet;
+    width: 100%;
+    z-index: 2;
+    height: 2.8rem;
+}
+
+.navbar_base_container {
+    max-width: 95%;
+    padding: 0;
+
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo_container {
+    flex: 1;
+    background-color: red;
+
+}
+
+.navigation_search_bar_container {
+    flex: 5;
+    display: flex;
+    padding: .4%;
+
+}
+
+.navigation_button_container {
+    flex: 5;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.navigation_links {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.navigation_links>ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navigation_links .link_item>a {
+    background-color: #ff973c;
+
+    font-size: 1.4em;
+    font-weight: 600;
+    /* line-height: 1rem; */
+    color: white;
+    /* padding: 0 0.5em; */
+    margin: 0 .5em;
+     transition: .5s;
+}
+
+
+
+/*Search bar customization */
+.search_bar {
+    margin: 0px;
+    width: 40%;
+    height: 60%;
+    display: flex;
+    padding: 0px;
+    padding-left: 20px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: none;
+}
+
+.search_form {
+    width: 90%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.search_form .search-bar-input {
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border: none;
+}
+
+.search_form .search-bar-input:focus {
+    outline: none;
+}
+
+.search_form .search-button {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    height: 100%;
+    width: 20%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #ff973c;
+    border: none;
+}
+
+/*end*/
+
+/* Drop Down arrow design begin */
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* end */

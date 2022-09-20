@@ -52,3 +52,5 @@ def generate_bed_no():
             word.active_bed += 1
             word.save()
             return word.id
+
+
