@@ -1,7 +1,9 @@
+import profile
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from .models import Nurse, User, Patient
 from django.contrib.auth import authenticate, login, logout
+from datetime import date
 # Create your views here.
 
 
@@ -67,12 +69,37 @@ def nurse_profile(req):
 
 def show_schedule(req):
 
-    return render(req, "pop_up_new.html")
+    nurse_email = req.user.email
+    nurse = Nurse.objects.get(email=nurse_email)
+    # if nurse.last_update_date == date.today():
+    schedule_info = {
+        'shift': nurse.shift,
+        'word': nurse.allocated_word
+    }
+
+    return render(req, "pop_up_new.html",
+                  context={'schedule': schedule_info})
 
 
-def nurse_set_info(req):
-    # return render("  ")
-    return HttpRequest("Nurse Details")
+def nurse_profile_update(req):
+    if req.method == "POST":
+        first_name = req.POST.get("first_name")
+        middle_name = req.POST.get("middle_name")
+        last_name = req.POST.get("last_name")
+        male = req.POST.get("male")
+        female = req.POST.get("female")
+        other = req.POST.get("other")
+        age = req.POST.get("age")
+        phn_no = req.POST.get("phn_no")
+        add = req.POST.get("add")
+        file = req.POST.get("file")
+        estimation = req.POST.get("estimation")
+        email = req.POST.get("email")
+        password = req.POST.get("password1")
+
+        return redirect('/')
+    if (req.user.is_authenticated):
+        return render(req, "registration_form.html")
 
 
 def doctor_profile(req, nurse):

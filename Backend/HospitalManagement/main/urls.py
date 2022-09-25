@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home, signup, patient_registration, nurse_profile, logout_session, show_schedule, nurse_set_info
+from .views import home, signup, patient_registration, nurse_profile, logout_session, show_schedule, nurse_profile_update
 urlpatterns = [
     path('', home),    # Domainname.com/
     path('user/signup', signup),
@@ -10,6 +10,6 @@ urlpatterns = [
 
     path('patient/registration', patient_registration),
     path("user/nurse/schedule", show_schedule),
-    path("user/nurse/setprofile", nurse_set_info)
+    path("user/nurse/setprofile", nurse_profile_update)
 
 ]

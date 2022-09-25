@@ -3,96 +3,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="registration_form.css">
-    <form><img id="logo" src="./images/logo.png" >
-        <img id="no1" src="./images/no1.png" >
+    <link rel="stylesheet" href="registration_form.css">
+    <form method="post">
+        {% csrf_token %}
+        <img id="logo" src="./images/logo.png">
+        <img id="no1" src="./images/no1.png">
         <!-- top of the form -->
-        <u><h1>registration form</h1></u>
+        <u>
+            <h1>registration form</h1>
+        </u>
         <hr size="5px" color="black">
         <br><br>
         <!-- first name -->
         <div id="text_body">
-        <label for="first_name"  id="first_name" class="text_of_form" >first name:</label>
-        <input type="text" name="first_name"placeholder="enter first name">
-        <br><br>
-        <!-- second name -->
-        <label for="middle_name" id="middle_name:" class="text_of_form">middle name:</label>
-        <input type="text" name="middle_name" placeholder="enter middle name">
-        <br><br>
-        <!-- last name -->
-        <label for="last_name" id="last_name" class="text_of_form">last name:</label>
-        <input type="text" name="last_name"  placeholder="enter last name">
-        <br><br>
-        <!-- gender choice -->
-        <label for="gender" class="text_of_form">choose your gender:</label>
-        <input type="radio" name="gender" id="male">
-        <label for="male">male</label>
-        <input type="radio" name="gender" id="female">
-        <label for="female">female</label>
-        <input type="radio" name="gender" id="others">
-        <label for="others">others</label>
-        <br><br>
-        <!-- age -->
-        <label for="age" id="age" class="text_of_form">enter your age:</label>
-        <input type="number" name="age"  placeholder="age">
-        <br><br>
-        <!-- phn no -->
-        <label for="phn_no" id="phn_no" class="text_of_form">phn no:</label>
-        <input type="number" name="phn_no"  placeholder="phn no.">
-        <br><br>
-        <!-- address  -->
-        <label for="add" id="add" class="text_of_form">address:</label>
-        <textarea  rows="2.5" cols="40" name="add"  placeholder="full address"></textarea>
-        <br><br>
-        <!-- drop down for branches -->
-        <label for="types_of_problems" class="text_of_form">choose your problem:</label>
-        <select name="types" id="types">
-            <option >select</option>
-            <option value="ENT Care">ENT Care</option>
-            <option value="Neonatal">Neonatal</option>
-            <option value="Neurology">Neurology</option>
-            <option value="Cardiology">Cardiology</option>
-            <option value="Orthopedic">Orthopedic</option>
-            <option value="Gastroentology">Gastroentology</option>
-            <option value="Oncology">Oncology</option>
-            <option value="Hematology">Hematology</option>
-        </select>
-        <br><br>
-        <!-- area for address -->
-        <label for="details" id="details" class="text_of_form">details of issue:</label>
-        <textarea  rows="2.5" cols="40" name="details"  placeholder="details of the issue"></textarea>
-        <br><br>
-        <!-- duration -->
-        <label for="duration" id="duration" class="text_of_form">enter the duration of the issue:</label>
-        <input type="number" placeholder="in month" name="duration" >
-        <br><br>
-        <!-- image of docs -->
-        <label for="file" class="text_of_form">upload the required file image </label>
-        <input type="file" name="file" accept="image/*" id="file">
-        <br><br>
-        <!-- date for meeting -->
-        <label for="estimated_date" id="estimation" class="text_of_form">choose the estimated date for apoinment:</label>
-        <input type="date" name="estimation" >
-        <br><br>
-        <!-- mail -->
-        <label for="email" id="email" class="text_of_form">mail id.</label>
-        <input type="email" name="email"  placeholder="enter correct one">
-        <br><br>
-        <!-- pw1 as text -->
-        <label for="password1" id="password1" class="text_of_form">enter a strong password:</label>
-        <input type="text" placeholder="enter the password" name="password1" >
-        <br><br>
-        <!-- pw as password -->
-        <label for="password2" id="password2" class="text_of_form">reenter the password:</label>
-        <input type="password" placeholder="again enter the password" name="password2"  >
-        <br><br>
-        <!-- chexk box for terms and condition -->
-        <input type="checkbox" name="terms_and_conditions" >
-        <label for="terms_and_conditions" id="terms_and_conditions" class="text_of_form">terms_and_conditions</label>
-        <br><br>
-        <!-- reset and submit button -->
-        <input type="reset" name="reset" id="reset" value="reset" >
-        <input type="submit" name="submit" id="submit" value="submit">
-    </div>
+            <label for="first_name" id="first_name" class="text_of_form">first name:</label>
+            <input type="text" name="first_name" placeholder="enter first name">
+            <br><br>
+            <!-- second name -->
+            <label for="middle_name" id="middle_name:" class="text_of_form">middle name:</label>
+            <input type="text" name="middle_name" placeholder="enter middle name">
+            <br><br>
+            <!-- last name -->
+            <label for="last_name" id="last_name" class="text_of_form">last name:</label>
+            <input type="text" name="last_name" placeholder="enter last name">
+            <br><br>
+            <!-- gender choice -->
+            <label for="gender" class="text_of_form">choose your gender:</label>
+            <input type="radio" name="male" id="male">
+            <label for="male">male</label>
+            <input type="radio" name="female" id="female">
+            <label for="female">female</label>
+            <input type="radio" name="other" id="others">
+            <label for="others">others</label>
+            <br><br>
+            <!-- age -->
+            <label for="age" id="age" class="text_of_form">enter your age:</label>
+            <input type="number" name="age" placeholder="age">
+            <br><br>
+            <!-- phn no -->
+            <label for="phn_no" id="phn_no" class="text_of_form">phn no:</label>
+            <input type="number" name="phn_no" placeholder="phn no.">
+            <br><br>
+            <!-- address  -->
+            <label for="add" id="add" class="text_of_form">address:</label>
+            <textarea rows="2.5" cols="40" name="add" placeholder="full address"></textarea>
+            <br><br>
+            <!-- drop down for branches -->
+            <label for="types_of_problems" class="text_of_form">choose your problem:</label>
+            <select name="types" id="types">
+                <option>select</option>
+                <option value="ENT Care">ENT Care</option>
+                <option value="Neonatal">Neonatal</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Orthopedic">Orthopedic</option>
+                <option value="Gastroentology">Gastroentology</option>
+                <option value="Oncology">Oncology</option>
+                <option value="Hematology">Hematology</option>
+            </select>
+            <br><br>
+            <!-- area for address -->
+            <label for="details" id="details" class="text_of_form">details of issue:</label>
+            <textarea rows="2.5" cols="40" name="details" placeholder="details of the issue"></textarea>
+            <br><br>
+            <!-- duration -->
+            <label for="duration" id="duration" class="text_of_form">enter the duration of the issue:</label>
+            <input type="number" placeholder="in month" name="duration">
+            <br><br>
+            <!-- image of docs -->
+            <label for="file" class="text_of_form">upload the required file image </label>
+            <input type="file" name="file" accept="image/*" id="file">
+            <br><br>
+            <!-- date for meeting -->
+            <label for="estimated_date" id="estimation" class="text_of_form">choose the estimated date for
+                apoinment:</label>
+            <input type="date" name="estimation">
+            <br><br>
+            <!-- mail -->
+            <label for="email" id="email" class="text_of_form">mail id.</label>
+            <input type="email" name="email" placeholder="enter correct one">
+            <br><br>
+            <!-- pw1 as text -->
+            <label for="password1" id="password1" class="text_of_form">enter a strong password:</label>
+            <input type="text" placeholder="enter the password" name="password1">
+            <br><br>
+            <!-- pw as password -->
+            <!-- <label for="password2" id="password2" class="text_of_form">reenter the password:</label>
+            <input type="password" placeholder="again enter the password" name="password2"> -->
+            <br><br>
+            <!-- chexk box for terms and condition -->
+            <!-- <input type="checkbox" name="terms_and_conditions">
+            <label for="terms_and_conditions" id="terms_and_conditions"
+                class="text_of_form">terms_and_conditions</label> -->
+            <br><br>
+            <!-- reset and submit button -->
+            <input type="reset" name="reset" id="reset" value="reset">
+            <input type="submit" name="submit" id="submit" value="submit">
+        </div>
     </form>
 </div>
