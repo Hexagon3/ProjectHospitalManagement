@@ -1,13 +1,16 @@
+{% load static %}
 <div id="main_body">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="nurse_form.css">
+    <link rel="stylesheet" href="{% static 'css/nurse_form.css' %}">
     <form method="post">
         {% csrf_token %}
-        <img id="logo" src="./images/logo.png">
-        <img id="no1" src="./images/no1.png">
+
+
+        <img id="logo" src="{% static './images/logo.png' %}">
+        <img id="no1" src="{% static './images/no1.png' %}">
         <!-- top of the form -->
         <u>
             <h1>registration form</h1>
@@ -29,11 +32,11 @@
             <br><br>
             <!-- gender choice -->
             <label for="gender" class="text_of_form">choose your gender:</label>
-            <input type="radio" name="male" id="male">
+            <input type="radio" name="gender" id="male" value="male">
             <label for="male">male</label>
-            <input type="radio" name="female" id="female">
+            <input type="radio" name="gender" id="female" value="female">
             <label for="female">female</label>
-            <input type="radio" name="other" id="others">
+            <input type="radio" name="gender" id="others" value="other">
             <label for="others">others</label>
             <br><br>
             <!-- age -->
@@ -50,7 +53,7 @@
             <br><br>
             <!-- drop down for branches -->
             <label for="types_of_problems" class="text_of_form">specilist in:</label>
-            <select name="types" id="types">
+            <select name="types" id="types" name="department">
                 <option>select</option>
                 <option value="ENT Care">ENT Care</option>
                 <option value="Neonatal">Neonatal</option>
@@ -72,29 +75,30 @@
             <br><br>
             <!-- image of docs -->
             <label for="file" class="text_of_form">upload your photo </label>
-            <input type="file" name="file" accept="image/*" id="file">
+            <input type="file" name="image" id="file">
             <br><br>
             <!-- date for meeting -->
-            <label for="estimated_date" id="estimation" class="text_of_form">choose the estimated date for joining:</label>
+            <label for="estimated_date" id="estimation" class="text_of_form">choose the estimated date for
+                joining:</label>
             <input type="date" name="estimation">
             <br><br>
             <!-- mail -->
-            <label for="email" id="email" class="text_of_form">mail id.</label>
+            <!-- <label for="email" id="email" class="text_of_form">mail id.</label>
             <input type="email" name="email" placeholder="enter correct one">
-            <br><br>
+            <br><br> -->
             <!-- pw1 as text -->
-            <label for="password1" id="password1" class="text_of_form">enter a strong password:</label>
+            <!-- <label for="password1" id="password1" class="text_of_form">enter a strong password:</label>
             <input type="text" placeholder="enter the password" name="password1">
-            <br><br>
+            <br><br> -->
             <!-- pw as password -->
             <!-- <label for="password2" id="password2" class="text_of_form">reenter the password:</label>
             <input type="password" placeholder="again enter the password" name="password2"> -->
-            <br><br>
+            <!-- <br><br> -->
             <!-- chexk box for terms and condition -->
             <!-- <input type="checkbox" name="terms_and_conditions">
             <label for="terms_and_conditions" id="terms_and_conditions"
                 class="text_of_form">terms_and_conditions</label> -->
-            <br><br>
+            <!-- <br><br> -->
             <!-- reset and submit button -->
             <input type="reset" name="reset" id="reset" value="reset">
             <input type="submit" name="submit" id="submit" value="submit">
