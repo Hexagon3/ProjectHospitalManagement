@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/nurse_form.css' %}">
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
 
@@ -74,8 +74,10 @@
             <input type="number" placeholder="in year" name="experience">
             <br><br>
             <!-- image of docs -->
+
+
             <label for="file" class="text_of_form">upload your photo </label>
-            <input type="file" name="image" id="file">
+            <input type="file" name="image" accept="./*" id="file">
             <br><br>
             <!-- date for meeting -->
             <label for="estimated_date" id="estimation" class="text_of_form">choose the estimated date for

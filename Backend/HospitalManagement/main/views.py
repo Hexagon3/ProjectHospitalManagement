@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpRequest
 from .models import Nurse, User, Patient
 from django.contrib.auth import authenticate, login, logout
 from datetime import date
+from .form import ImageUpload
 # Create your views here.
 
 
@@ -60,7 +61,7 @@ def logout_session(req: HttpRequest):
 
 
 def nurse_profile(req):
-
+    print(req.user.nurse)
     active_nurse = Nurse.objects.get(username=req.user.username)
     context = {"nurse": active_nurse}
     return render(req, 'Bio.html', context=context)
@@ -83,23 +84,46 @@ def show_schedule(req):
 
 def nurse_profile_update(req):
     if req.method == "POST":
+        # form = ImageUpload(req.POST, req.FILES)
+
         first_name = req.POST.get("first_name")
         middle_name = req.POST.get("middle_name")
         last_name = req.POST.get("last_name")
-        male = req.POST.get("male")
-        female = req.POST.get("female")
-        other = req.POST.get("other")
-        age = req.POST.get("age")
-        phn_no = req.POST.get("phn_no")
-        add = req.POST.get("add")
-        file = req.POST.get("file")
-        estimation = req.POST.get("estimation")
-        email = req.POST.get("email")
-        password = req.POST.get("password1")
 
-        return redirect('/')
+        name = first_name+" "+middle_name+" "+last_name
+        gender = req.POST.get('gender')
+        age = req.POST.get('age')
+        # profile_pic = req.FILES['image']
+
+        bio = req.POST.get('bio')
+        address = req.POST.get('age')
+        # license_no  =  req.POST.get('license')
+        contact_no = req.POST.get('phn_no')
+        experience = req.POST.get('experience')
+        department = req.POST.get('department')
+        # email = req.POST.get("email")
+        # password = req.POST.get("password1")
+
+        nurse = req.user.nurse
+
+        # nurse.name = name
+        nurse.profile_pic = profile_pic
+        nurse.bio = bio
+        nurse.gender = gender
+        nurse.address = address
+        # nurse.license = license_no
+        nurse.contact_no = contact_no
+        nurse.experience = experience
+        nurse.department = department
+
+        nurse.save()
+        # if form.is_valid():
+        #     form.save()
+        return redirect('/user/nurse/profile')
+
+    form = ImageUpload()
     if (req.user.is_authenticated):
-        return render(req, "registration_form.html")
+        return render(req, "nurse_form.html",  {'form': form})
 
 
 def doctor_profile(req, nurse):

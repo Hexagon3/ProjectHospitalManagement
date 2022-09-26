@@ -14,6 +14,9 @@ class Nurse (models.Model):
     address = models.TextField(null=True)
     license = models.CharField(max_length=12, null=True)
     contact_no = models.CharField(max_length=10, null=True)
+    experience = models.IntegerField(default=0, null=True)
+    department = models.CharField(max_length=128, null=True)
+    gender = models.CharField(max_length=20)
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
