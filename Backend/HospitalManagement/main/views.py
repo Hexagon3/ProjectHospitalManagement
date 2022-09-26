@@ -1,8 +1,10 @@
-from urllib import request
+import profile
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from .models import Nurse, User, Patient
 from django.contrib.auth import authenticate, login, logout
+from datetime import date
+from .form import ImageUpload
 # Create your views here.
 
 
@@ -39,11 +41,16 @@ def signup(req):
         except:
             email = req.POST.get("email")
             passwd = req.POST.get('password')
-            nurse = Nurse.objects.get(email=email)
+            try:
+                nurse = Nurse.objects.get(email=email)
+            except:
+                return render(req, "member_login.html")
             user = nurse.user  # authenticate(request)
-            login(req, user)
-
-        return HttpResponse("Registration Success")
+            if user.check_password(passwd):
+                login(req, user)
+                return redirect("/")
+            else:
+                return render(req, "member_login.html")
 
     return render(req, "member_login.html")
 
@@ -54,12 +61,69 @@ def logout_session(req: HttpRequest):
 
 
 def nurse_profile(req):
-    return HttpResponse(
+    print(req.user.nurse)
+    active_nurse = Nurse.objects.get(username=req.user.username)
+    context = {"nurse": active_nurse}
+    return render(req, 'Bio.html', context=context)
+    # return HttpResponse(f'<h1> Nurse Profile </h1>')
 
-        f'<h1> Nurse Profile </h1>'
+
+def show_schedule(req):
+
+    nurse_email = req.user.email
+    nurse = Nurse.objects.get(email=nurse_email)
+    # if nurse.last_update_date == date.today():
+    schedule_info = {
+        'shift': nurse.shift,
+        'word': nurse.allocated_word
+    }
+
+    return render(req, "pop_up_new.html",
+                  context={'schedule': schedule_info})
 
 
-    )
+def nurse_profile_update(req):
+    if req.method == "POST":
+        # form = ImageUpload(req.POST, req.FILES)
+
+        first_name = req.POST.get("first_name")
+        middle_name = req.POST.get("middle_name")
+        last_name = req.POST.get("last_name")
+
+        name = first_name+" "+middle_name+" "+last_name
+        gender = req.POST.get('gender')
+        age = req.POST.get('age')
+        # profile_pic = req.FILES['image']
+
+        bio = req.POST.get('bio')
+        address = req.POST.get('age')
+        # license_no  =  req.POST.get('license')
+        contact_no = req.POST.get('phn_no')
+        experience = req.POST.get('experience')
+        department = req.POST.get('department')
+        # email = req.POST.get("email")
+        # password = req.POST.get("password1")
+
+        nurse = req.user.nurse
+
+        # nurse.name = name
+        nurse.profile_pic = profile_pic
+        nurse.bio = bio
+        nurse.gender = gender
+        nurse.address = address
+        # nurse.license = license_no
+        nurse.contact_no = contact_no
+        nurse.experience = experience
+        nurse.department = department
+
+        nurse.save()
+        # if form.is_valid():
+        #     form.save()
+        return redirect('/user/nurse/profile')
+
+    form = ImageUpload()
+    if (req.user.is_authenticated):
+        return render(req, "nurse_form.html",  {'form': form})
 
 
 def doctor_profile(req, nurse):
