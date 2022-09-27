@@ -1,10 +1,11 @@
-import profile
+
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from .models import Nurse, User, Patient
 from django.contrib.auth import authenticate, login, logout
 from datetime import date
 from .form import ImageUpload
+from .scheduling import generate_bed_no
 # Create your views here.
 
 
@@ -145,6 +146,7 @@ def patient_registration(req):
         female = req.POST.get("female")
         male = req.POST.get("male")
         other = req.POST.get("other")
+        word_id = generate_bed_no()
         if male == True:
             gender = 'male'
         elif female == True:
@@ -158,7 +160,8 @@ def patient_registration(req):
             email=email,
             adhar_no=adhar,
             address=address,
-            gender=gender
+            gender=gender,
+            word_id=word_id
 
         )
         patient.save()

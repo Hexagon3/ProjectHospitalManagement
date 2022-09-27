@@ -40,7 +40,6 @@ class Patient(models.Model):
     adhar_no = models.CharField(max_length=16, null=True)
     gender = models.CharField(max_length=10, null=True)
     word_id = models.IntegerField()
-    room_no = models.IntegerField()
 
     def __str__(self):
         return self.name
