@@ -6,9 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/pop_up_new.css' %}">
     <div id="all">
-        <div class="text" id="top_text">todays schedule</div><br><br>
-        <span class="text" id="word">word no:8</span><br><br><br>
-        <span id="name">2nd shift:06:00am-02:00pm</span>
+        <div class="text" id="top_text">Todays Schedule</div><br><br>
+        <span class="text" id="word">word no:{{req.user.nurse.allocated_word}}</span><br><br><br>
+        <span id="name">{{req.user.nurse.shift}}:06:00am-02:00pm</span>
         <div id="names">
             <pre>
         1)alpha
