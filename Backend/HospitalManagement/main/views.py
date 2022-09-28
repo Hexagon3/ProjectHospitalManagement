@@ -24,9 +24,24 @@ def signup(req):
             email = req.POST.get("email")
             passwd2 = req.POST.get('psswd2')
             passwd1 = req.POST.get('psswd1')
-            print(passwd1)
             if passwd1 == None:
-                raise "f"
+                print('x')
+                raise "erroe"
+            try:
+                user = User.objects.get(email=email)
+                context = {'message': {
+                    'failed': True, "reason": "This Email is already exists."}}
+                return render(req, "member_login.html", context)
+            except:
+                pass
+            try:
+                user = User.objects.get(email=username)
+                context = {'message': {
+                    'failed': True, "reason": "This username is already taken."}}
+                return render(req, "member_login.html", context)
+            except:
+                pass
+
             print(passwd1)
             if (passwd1 == passwd2):
                 user = User.objects.create_user(
@@ -35,13 +50,14 @@ def signup(req):
                            user=user)
                 n1.save()
                 login(req, n1.user)
-                print("login Success")
+                # print("login Success")
 
-                user = {'logedin': req.user.is_authenticated}
-                context = {'user': user}
+                # user = {'logedin': req.user.is_authenticated}
+                # context = {'user': user}
                 return redirect("/")
             else:
-                context = {"message": "Login faild"}
+                context = {'message': {
+                    'failed': True, "reason": "Password Does bot match. Please Check"}}
                 return render(req, "member_login.html", context)
         except:
             email = req.POST.get("email")
@@ -49,16 +65,18 @@ def signup(req):
             try:
                 nurse = Nurse.objects.get(email=email)
             except:
-                return render(req, "member_login.html")
+                context = {"message":
+                           {'failed': True, "reason": "This Email is not registered. Please Check"}}
+                return render(req, "member_login.html", context=context)
             user = nurse.user  # authenticate(request)
-
-            print(user)
             if user.check_password(passwd):
                 print(user)
                 login(req, user)
                 return redirect("/")
             else:
-                return render(req, "member_login.html")
+                context = {'message': {'failed': True,
+                                       "reason": "Wrong Password."}}
+                return render(req, "member_login.html", context=context)
 
     return render(req, "member_login.html")
 

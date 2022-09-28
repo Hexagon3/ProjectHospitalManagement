@@ -1,10 +1,36 @@
 /* background style */
-
 body {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     justify-content: right;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background-image: url(../images/img3.jpg);
+    background-size: cover;
+}
+
+.Message {
+    background-color: red;
+    /* opacity: .4; */
+    border-radius: 20px;
+    border-color: red;
+}
+
+.Message_text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 50px;
+
+    opacity: 1;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Jost', sans-serif;

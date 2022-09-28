@@ -10,38 +10,50 @@
 </head>
 
 <body>
-    <div class="main1">
-        <input type="checkbox" name="login" id="chk" aria-hidden="true">
+    {% if message.failed %}
+    <div class="Message">
+        <div class="Message_text">
 
-        <!-- Signup form -->
-
-        <div class="signup">
-            <form method="post">
-                {% csrf_token %}
-                <label class="label" for="chk" aria-hidden="true">SIGN UP</label>
-                <input class="input" type="text" name="username" placeholder="User Name" required="">
-                <input class="input" type="email" name="email" placeholder="abc@gmail.com" required="">
-                <input class="input" type="Password" name="psswd1" placeholder="Password" required="">
-
-                <input class="input" type="Password" name="psswd2" placeholder="Confirm Password" required="">
-                <div class="chcek">
-                    <input type="checkbox" name="checkbox1" required>
-                    <label for="chk" aria-hidden="true" class="check-label">Terms and conditions</label>
-                </div>
-                <button type="submit">SIGN UP</button>
-            </form>
+            {{ message.reason }}
         </div>
 
-        <!-- Login form -->
+    </div>
+    {% endif %}
 
-        <div class="login">
-            <form method="post">
-                {% csrf_token %}
-                <label class="label" for="chk" aria-hidden="true">LOGIN</label>
-                <input class="input" type="email" name="email" placeholder="abc@gmail.com" required>
-                <input class="input" type="Password" name="password" placeholder="Password" required>
-                <button type="submit">LOGIN</button>
-            </form>
+    <div class="body">
+        <div class="main1">
+            <input type="checkbox" name="login" id="chk" aria-hidden="true">
+
+            <!-- Signup form -->
+
+            <div class="signup">
+                <form method="post">
+                    {% csrf_token %}
+                    <label class="label" for="chk" aria-hidden="true">SIGN UP</label>
+                    <input class="input" type="text" name="username" placeholder="User Name" required="">
+                    <input class="input" type="email" name="email" placeholder="abc@gmail.com" required="">
+                    <input class="input" type="Password" name="psswd1" placeholder="Password" required="">
+
+                    <input class="input" type="Password" name="psswd2" placeholder="Confirm Password" required="">
+                    <div class="chcek">
+                        <input type="checkbox" name="checkbox1" required>
+                        <label for="chk" aria-hidden="true" class="check-label">Terms and conditions</label>
+                    </div>
+                    <button type="submit">SIGN UP</button>
+                </form>
+            </div>
+
+            <!-- Login form -->
+
+            <div class="login">
+                <form method="post">
+                    {% csrf_token %}
+                    <label class="label" for="chk" aria-hidden="true">LOGIN</label>
+                    <input class="input" type="email" name="email" placeholder="abc@gmail.com" required>
+                    <input class="input" type="Password" name="password" placeholder="Password" required>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
