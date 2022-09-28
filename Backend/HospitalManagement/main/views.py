@@ -22,13 +22,17 @@ def signup(req):
         try:
             username = req.POST.get("username")
             email = req.POST.get("email")
-            passwd2 = req.POST.get('passwd2')
-            passwd1 = req.POST.get('passwd1')
-
+            passwd2 = req.POST.get('psswd2')
+            passwd1 = req.POST.get('psswd1')
+            print(passwd1)
+            if passwd1 == None:
+                raise "f"
+            print(passwd1)
             if (passwd1 == passwd2):
-                n1 = Nurse(username=username, email=email, name=username)
-                n1.user = User.objects.create_user(
+                user = User.objects.create_user(
                     username=username, email=email, password=passwd2)
+                n1 = Nurse(username=username, email=email, name=username,
+                           user=user)
                 n1.save()
                 login(req, n1.user)
                 print("login Success")
@@ -47,7 +51,10 @@ def signup(req):
             except:
                 return render(req, "member_login.html")
             user = nurse.user  # authenticate(request)
+
+            print(user)
             if user.check_password(passwd):
+                print(user)
                 login(req, user)
                 return redirect("/")
             else:
@@ -108,7 +115,7 @@ def nurse_profile_update(req):
         nurse = req.user.nurse
 
         # nurse.name = name
-        nurse.profile_pic = profile_pic
+        # nurse.profile_pic = profile_pic
         nurse.bio = bio
         nurse.gender = gender
         nurse.address = address
