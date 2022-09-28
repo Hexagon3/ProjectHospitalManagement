@@ -111,28 +111,60 @@ def show_schedule(req):
 def nurse_profile_update(req):
     if req.method == "POST":
         # form = ImageUpload(req.POST, req.FILES)
-
-        first_name = req.POST.get("first_name")
-        middle_name = req.POST.get("middle_name")
-        last_name = req.POST.get("last_name")
-
-        name = first_name+" "+middle_name+" "+last_name
-        gender = req.POST.get('gender')
-        age = req.POST.get('age')
-        # profile_pic = req.FILES['image']
-
-        bio = req.POST.get('bio')
-        address = req.POST.get('age')
-        # license_no  =  req.POST.get('license')
-        contact_no = req.POST.get('phn_no')
-        experience = req.POST.get('experience')
-        department = req.POST.get('department')
-        # email = req.POST.get("email")
-        # password = req.POST.get("password1")
-
         nurse = req.user.nurse
 
-        # nurse.name = name
+        try:
+            first_name = req.POST.get("first_name")
+        except:
+            irst_name = nurse.irst_name
+        try:
+            middle_name = req.POST.get("middle_name")
+        except:
+            pass
+        try:
+            last_name = req.POST.get("last_name")
+        except:
+            pass
+        name = first_name+" "+middle_name+" "+last_name
+
+        try:
+            gender = req.POST.get('gender')
+        except:
+            gender = nurse.gender
+        try:
+            age = req.POST.get('age')
+        except:
+            age = nurse.age
+        # try:
+        #       profile_pic = req.FILES['image']
+        # except :
+        #       pass
+        try:
+            bio = req.POST.get('bio')
+        except:
+            bio = nurse.bio
+        try:
+            address = req.POST.get('age')
+        except:
+            address = nurse.address
+        # try:
+        #     license_no  =  req.POST.get('license')
+        # except:
+        #     pass
+        try:
+            contact_no = req.POST.get('phn_no')
+        except:
+            contact_no = nurse.contact_no
+        try:
+            experience = req.POST.get('experience')
+        except:
+            experience = nurse.experience
+        try:
+            department = req.POST.get('department')
+        except:
+            department = nurse.department
+
+        nurse.name = name
         # nurse.profile_pic = profile_pic
         nurse.bio = bio
         nurse.gender = gender
@@ -141,7 +173,6 @@ def nurse_profile_update(req):
         nurse.contact_no = contact_no
         nurse.experience = experience
         nurse.department = department
-
         nurse.save()
         # if form.is_valid():
         #     form.save()
