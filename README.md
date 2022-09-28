@@ -1,13 +1,7 @@
 
 # Branch and their worker (Temporary Notes) 
- ## Digdorshee -- pending
- please creat your branch and edit this file
- ## sinchan --working with fronted-HCJ
- ## ankita --working with loginpage-update / (home-footer -- create this first from main branch)
- ## Aritri --working with nurseBottom /home-top
- ## Aritra --working with backend-django / home-top
- 
-
+## Chapter 2 : Admin module 
+### Aritra -- working with admin-model
 
 # Project Hospital Management
 This project is given by SBH sir 
