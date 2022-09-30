@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'administrator.apps.AdministratorConfig',
     # 'UserAccounts.apps.UseraccountsConfig'
 ]
 
@@ -52,12 +53,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'HospitalManagement.urls'
-TEMPLATE_DIR = BASE_DIR.parent.parent / "Frontend"
+TEMPLATE_DIR_MAIN_MODULE = BASE_DIR.parent.parent / "Frontend" / "main"
+TEMPLATE_DIR_ADMINISTRATOR_MODULE = BASE_DIR.parent.parent / \
+    "Frontend" / "administrator"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [  # Template Directory
-            TEMPLATE_DIR,
+            TEMPLATE_DIR_MAIN_MODULE,
+            TEMPLATE_DIR_ADMINISTRATOR_MODULE,
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -122,7 +128,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [  # Static Directory all static files related to main app is placed here
-    TEMPLATE_DIR / "statics",
+    TEMPLATE_DIR_MAIN_MODULE / "statics",
+    TEMPLATE_DIR_ADMINISTRATOR_MODULE / "statics",
 
 ]
 MEDIA_ROOT = BASE_DIR/"media"
