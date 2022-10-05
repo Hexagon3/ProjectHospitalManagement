@@ -1,0 +1,163 @@
+/* Aritra tui header chenge korle h3 r header class er css gulo muche dibi */
+*{
+    margin: 0;
+    padding: 0;
+}
+.bottom {
+    
+    background-image: linear-gradient(rgb(106, 146, 249), rgba(82, 147, 161, 0.6194), rgba(199, 242, 105, 0.96));
+    height: 303px;
+}
+.left {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+.right {
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.sub {
+    /* background-color: rgb(198, 72, 72); */
+    height: 32vh;
+    width: 46vw;
+    margin: 30px 30px 30px 30px;
+}
+.box {
+    height: 8vh;
+    width: 100%;
+}
+.lft {
+    height: 100%;
+    width: 34%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+    float: left;
+}
+.rigt {
+    border: 2px solid black;
+    border-radius: 5px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+    width: 64.5%;
+    float: right;        
+}
+.blank {
+    height: 88px;
+}
+
+
+.h3 {
+    background-color: aqua;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #55ACDA;
+    border: 2px solid black;
+}
+
+.container {
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.upper {
+    height: 45vh;
+    width: 50vw;
+}
+
+.lower {
+    height: 45vh;
+    width: 50vw;
+}
+
+.forCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box {
+    height: auto;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.a2 {
+    text-align: right;
+    font-weight: bold;
+    font-size: 150%;
+    top: 100px;
+    padding: 10px;
+}
+
+.a3 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: right;
+}
+
+.a4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    padding: 20px;
+}
+
+.a5 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color: rgb(217, 94, 94);
+    height: 25px;
+    width: 150px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.a6 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.a7 {
+    text-align: right;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 20px;
+}
+
+.a8 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color: rgb(68, 236, 26);
+    height: 25px;
+    width: 150px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
