@@ -63,6 +63,8 @@ TEMPLATES = [
         'DIRS': [  # Template Directory
             TEMPLATE_DIR_MAIN_MODULE,
             TEMPLATE_DIR_ADMINISTRATOR_MODULE,
+            # For now
+            BASE_DIR.parent.parent / "Frontend"
 
         ],
         'APP_DIRS': True,
@@ -130,6 +132,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [  # Static Directory all static files related to main app is placed here
     TEMPLATE_DIR_MAIN_MODULE / "statics",
     TEMPLATE_DIR_ADMINISTRATOR_MODULE / "statics",
+    # For now
+    BASE_DIR.parent.parent / "Frontend" / "statics"
 
 ]
 MEDIA_ROOT = BASE_DIR/"media"
