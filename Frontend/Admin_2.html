@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="{% static 'css/control_panel.css' %}" />
+  </head>
+  <body>
+      
+      <div class="main_container">
+        
+        <!--  Side bar list begin -->
+        <div class="left_bar_list">
+            <!-- catagory head -->
+            <div class="catagory_button" id="catagory_heading">Catagory</div>
+            <!-- catagory button list  -->
+            <div class="catagory_button" id="active_btn">
+                <a href="#" class = "link_of_catagory_option">nurse</a>
+            </div>
+            <div class="catagory_button">
+                <a href="#" class = "link_of_catagory_option">word</a>
+            </div>
+            
+        </div>
+      <!-- Sidebar list end -->
+        <!-- container section 
+        6 different types of container are their 
+        1. Nurse list  
+        2. New nurse add form 
+        3. Existing nurse update form 
+        4. Word list 
+        5. Nwe word update form 
+        6. Existing word update form 
+            only onle of six will display at a time    -->
+        
+
+      <!-- 1. Nurse list   begin-->
+      <div class="content_section" id = "nurse_list" >
+        <!-- item 1 -->
+        <div class="individual_nurse_item">
+            <a href="">name of nurse 1</a>
+        </div>
+        <!-- item 2 -->
+        <div class="individual_nurse_item">
+            <a href="">name of nurse 2</a>
+        </div>
+        <!-- item 3 -->
+        <div class="individual_nurse_item">
+            <a href="">name of nurse 3</a>
+        </div>
+        <!-- only for now set 3 nuse manually later it will render from dinamicly from database -->
+      </div>
+      <!--  end-->
+      
+      <!-- 2. New nurse add form begin-->
+      <!-- <div class="content_section">
+      
+      </div> -->
+      <!--  end-->
+      
+        <!--  3. Existing nurse update form begin-->
+      <!-- <div class="content_section">
+        
+      </div> -->
+      <!--  end-->
+
+
+        <!-- 4. Word list begin-->
+      <!-- <div class="content_section">
+        
+      </div> -->
+      <!--  end-->
+      
+
+      <!-- 5. Nwe word update form  begin-->
+      <!-- <div class="content_section">
+      
+      </div> -->
+      <!--  end-->
+
+      <!--  6. Existing word update form begin-->
+      <!-- <div class="content_section">
+        
+      </div> -->
+      <!--  end-->
+  
+     </div>   
+  
+  </body>
+</html>
