@@ -1,8 +1,11 @@
 .main_container{
-    display:flex;
-    height :790px;
-  
-    
+  align-items: center;
+  display:flex;
+  height : 85vh;
+  width: 85vw;  
+  border-radius:10px;
+  border-style:solid;
+  border-color:black;
   }
   /* left bar css part begin  */
   .left_bar_list{
@@ -18,6 +21,8 @@
   
   .catagory_button{
       /* general design of all component in side bar  */
+    text-align: center;
+    font-weight: bold;
     width:100%;
     height :20px;
     display: inline-block;
@@ -26,9 +31,11 @@
   }
   #catagory_heading{
       /* heading of side bar  */
+      height: 4vh;
       border-top-left-radius:inherit ;
       border-top-right-radius:inherit ;
-      background-color: aquamarine;
+      background-color: rgb(127, 255, 242);
+      font-size: 20px;
   }
   #active_btn{
       /* active button design */
@@ -41,6 +48,7 @@
       color: inherit;
       height:100%;
       width:100%;
+      font-size: large;
       display:inline-block;
       text-decoration: None;
   }
@@ -53,10 +61,21 @@
       flex:7;
       float:right;
       width:50%;
-      background-color:rgb(196, 196, 247);
-    
+      border-radius: 10px;
+      background-color:rgb(211, 211, 244);    
     }
-  
+    .headLine{
+      height: 4vh;
+      width:100%;
+      border-top-left-radius:inherit ;
+      border-top-right-radius:inherit ;
+      background-color: rgb(127, 255, 242);
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom-style:solid;
+      border-color:black;
+  }
   .individual_nurse_item{
       color:white;
   
