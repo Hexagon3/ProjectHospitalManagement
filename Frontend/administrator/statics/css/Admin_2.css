@@ -74,16 +74,21 @@
   /* general design of base container  */
   flex: 7;
   float: right;
+
+
   /* width: 50%; */
+
   /* border-radius: 10px; */
   /* background-color:rgb(157, 177, 186);     */
 }
 
 .headLine {
+
   /* height: 4vh; */
   display: flex;
   width: 100%;
   background-color: rgb(117, 240, 228);
+
   font-size: 20px;
   text-align: center;
   font-weight: bold;
@@ -94,15 +99,18 @@
 
 .individual_nurse_item {
   /* color:white; */
+
   display: flex;
   padding: .2%;
   /* text-align: center; */
   justify-content: center;
+
 }
 
 .individual_nurse_item a {
   color: inherit;
   text-decoration: none;
+
   flex: 3;
   position: relative;
 }
@@ -145,4 +153,5 @@
   color: aliceblue;
   background-color: rgb(37, 108, 84);
   font-size: 18px;
+
 }

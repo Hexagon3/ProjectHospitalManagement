@@ -1,0 +1,71 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="button_bar"><a>Nurse Update</a></div>
+    <br><br>
+    <!-- first name -->
+    <div id="text_body">
+        <label for="username" id="username" class="text_of_form">Userame:</label>
+        <input type="text" class="inpuit_field" name="username" placeholder=" username"
+            value="{{nurse_selected.username}}" required>
+        <br><br>
+        <label for="name" id="name" class="text_of_form">Name:</label>
+        <input type="text" class="inpuit_field" name="name" placeholder="name" value="{{nurse_selected.name}}">
+        <br><br>
+
+        <!-- mail -->
+        <label for="email" id="email" class="text_of_form">mail id.</label>
+        <input type="email" name="email" class="inpuit_field" placeholder="enter correct one"
+            value="{{nurse_selected.email}}" required>
+        <br><br>
+        <!-- pw1 as text -->
+        <label for="password" id="password" class="text_of_form">enter a strong password:</label>
+        <input type="text" class="inpuit_field" placeholder="enter the password" name="password1" value="{{password}}"
+            required>
+        <br><br>
+
+        <!-- age -->
+        <label for="age" id="age" class="text_of_form">enter your age:</label>
+        <input type="number" class="inpuit_field" name="age" placeholder="age" value={{nurse_selected.age}}>
+        <br><br>
+        <!-- phn no -->
+
+        <label for="phn_no" id="phn_no" class="text_of_form">phn no:</label>
+        <input type="number" class="inpuit_field" name="phn_no" placeholder="phn no."
+            value={{nurse_selected.contact_no}}>
+        <br><br>
+        <!-- address  -->
+        <label for="add" id="add" class="text_of_form">address:</label>
+        <textarea rows="2.5" cols="40" class="inpuit_field" name="add" placeholder="full address"
+            value={{nurse_selected.address></textarea>
+        <br><br>
+        <!-- drop down for branches -->
+        <label for="types_of_problems" class="text_of_form">specilist in:</label>
+        <select class="inpuit_field" name="types" id="types" name="department" selected="ENT Care">
+            <option>select</option>
+            <option value="ENT Care">ENT Care</option>
+            <option value="Neonatal">Neonatal</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Orthopedic">Orthopedic</option>
+            <option value="Gastroentology">Gastroentology</option>
+            <option value="Oncology">Oncology</option>
+            <option value="Hematology">Hematology</option>
+        </select>
+        <br><br>
+        <!-- duration -->
+        <label for="duration" id="duration" class="text_of_form">enter the experience:</label>
+        <input type="number" class="inpuit_field" placeholder="in year" name="experience">
+        <br><br>
+
+        <!-- reset and submit button -->
+        <div class="submit_btn_container">
+            {% if nurse_selected is not None %}
+            <input type="submit" name="submit" id="submit1" value="Update">
+            <input type="submit" name="submit" id="submit2" value="Delete">
+            {% else %}
+            <input type="submit" name="submit" id="submit1" value="Create">
+
+            {% endif %}
+        </div>
+    </div>
+</form>
