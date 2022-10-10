@@ -20,24 +20,19 @@
     <!-- The p is used for writing the different sub parts of the page -->
     <div class="container">
         <div class="left">
-            <div class="upper">
-                <div class="left forCenter">
-                    <img src="{% static 'images/profile_pic.png' %}" alt="Avatar woman" height="220px" width="220px"> 
-                </div>
-                <div class="right forCenter">
-                    <div>
-                        <p class="a5">Admin</p>
-                        <p class="a4">{{nurse.name}}</p>
-                        <p class="a6">License : {{nurse.license}}</p>
-                    </div>
+            <br><br>
+            <div class="forCenter">
+                <img src="{% static 'images/profile_pic.png' %}" alt="Avatar woman" height="220px" width="220px">
+            </div>
+            <br><br>
+            <div class="forCenter">
+                <div>
+                    <p class="a5">Admin</p>
+                    <p class="a4">{{nurse.name}}</p>
+                    <!-- <p class="a6">License : {{nurse.license}}</p> -->
                 </div>
             </div>
-            <div class="lower forCenter">
-                <div class="Box">
-                    <h2>Bio</h2>
-                    <p>{{nurse.bio}}</p>
-                </div>
-            </div>
+
         </div>
         <div class="right">
             <div class="upper forCenter">
