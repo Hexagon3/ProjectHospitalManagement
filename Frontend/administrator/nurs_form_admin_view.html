@@ -4,17 +4,31 @@
     <br><br>
     <!-- first name -->
     <div id="text_body">
+        <label for="username" id="username" class="text_of_form">Userame:</label>
+        <input type="text" class="inpuit_field" name="username" placeholder=" username"
+            value="{{nurse_selected.username}}" required>
+        <br><br>
         <label for="name" id="name" class="text_of_form">Name:</label>
-        <input type="text" class="inpuit_field" name="name" placeholder="enter last name"
-            value="{{nurse_selected.name}}">
+        <input type="text" class="inpuit_field" name="name" placeholder="name" value="{{nurse_selected.name}}">
         <br><br>
 
+        <!-- mail -->
+        <label for="email" id="email" class="text_of_form">mail id.</label>
+        <input type="email" name="email" class="inpuit_field" placeholder="enter correct one"
+            value="{{nurse_selected.email}}" required>
+        <br><br>
+        <!-- pw1 as text -->
+        <label for="password" id="password" class="text_of_form">enter a strong password:</label>
+        <input type="text" class="inpuit_field" placeholder="enter the password" name="password1" value="{{password}}"
+            required>
+        <br><br>
 
         <!-- age -->
         <label for="age" id="age" class="text_of_form">enter your age:</label>
         <input type="number" class="inpuit_field" name="age" placeholder="age" value={{nurse_selected.age}}>
         <br><br>
         <!-- phn no -->
+
         <label for="phn_no" id="phn_no" class="text_of_form">phn no:</label>
         <input type="number" class="inpuit_field" name="phn_no" placeholder="phn no."
             value={{nurse_selected.contact_no}}>
@@ -42,15 +56,7 @@
         <label for="duration" id="duration" class="text_of_form">enter the experience:</label>
         <input type="number" class="inpuit_field" placeholder="in year" name="experience">
         <br><br>
-        <!-- mail -->
-        <label for="email" id="email" class="text_of_form">mail id.</label>
-        <input type="email" name="email" class="inpuit_field" placeholder="enter correct one"
-            value="{{nurse_selected.email}}">
-        <br><br>
-        <!-- pw1 as text -->
-        <label for="password" id="password" class="text_of_form">enter a strong password:</label>
-        <input type="text" class="inpuit_field" placeholder="enter the password" name="password1" value="{{password}}">
-        <br><br>
+
         <!-- reset and submit button -->
         <div class="submit_btn_container">
             {% if nurse_selected is not None %}

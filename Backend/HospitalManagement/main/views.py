@@ -41,8 +41,6 @@ def signup(req):
                 return render(req, "member_login.html", context)
             except:
                 pass
-
-            print(passwd1)
             if (passwd1 == passwd2):
                 user = User.objects.create_user(
                     username=username, email=email, password=passwd2)
