@@ -14,20 +14,69 @@ def control_panel(req, catagory=None, form_type=None):
     if req.method == 'POST':
         if form_type == -1:
             username = req.POST.get("username")
-            password = req.POST.get("password")
             email = req.POST.get("email")
+            try:
+                User.objects.get(email=email)
+                context = {'catagory': catagory,
+                           'form_type': form_type,
+                           "message": "This Email is exist"}
+                return render(req, 'Admin_2.html', context=context)
+            except:
+                pass
+            try:
+                t = User.objects.get(username=username)
+                context = {'catagory': catagory,
+                           'form_type': form_type,
+                           "message": "This username is exist"}
+                return render(req, 'Admin_2.html', context=context)
+            except:
+                pass
+            name = req.POST.get("name")
+            age = req.POST.get("age")
+            contact_no = req.POST.get("phn_no")
+            address = req.POST.get("add")
+            department = req.POST.get("types")
+            experience = req.POST.get("experience")
+            password = req.POST.get("password")
             user = User.objects.create_user(
                 username=username, email=email, password=password)
             n1 = Nurse(username=username, email=email, name=username,
                        user=user)
-            n1.name = req.POST.get("name")
-            n1.age = req.POST.get("age")
-            n1.contact_no = req.POST.get("phn_no")
-            n1.address = req.POST.get("add")
-            n1.department = req.POST.get("types")
-            n1.experience = req.POST.get("experience")
+            try:
+                n1.name = name
+            except:
+                n1.name = n1.username
+            try:
+                n1.age = age
+            except:
+                n1.age = -1
+            try:
+                n1.contact_no = contact_no
+            except:
+                n1.contact_no = "None"
+            try:
+                n1.department = department
+            except:
+                n1.department = "None"
+            try:
+                n1.experience = experience
+            except:
+                n1.experience = 0
+                pass
             n1.save()
-        return redirect("/administrator/controlpanel")
+        else:
+            user = User.objects.get(id=form_type)
+            nurse = user.nurse
+            nurse.name = req.POST.get("name")
+            nurse.age = req.POST.get("age")
+            nurse.contact_no = req.POST.get("phn_no")
+            nurse.address = req.POST.get("add")
+            nurse.department = req.POST.get("types")
+            nurse.experience = req.POST.get("experience")
+            nurse.password = req.POST.get("password")
+            nurse.save()
+        return redirect("/administrator/control-panel")
+
     context = {
         'catagory': catagory,
         'form_type': form_type,

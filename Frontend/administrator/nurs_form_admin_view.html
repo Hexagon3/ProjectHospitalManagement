@@ -1,5 +1,8 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    {% if message is not None %}
+    <div style="color:white; background-color:red; text-align:center;font-size:15px;">{{ message }}</div>
+    {% endif %}
     <div class="button_bar"><a>Nurse Update</a></div>
     <br><br>
     <!-- first name -->
