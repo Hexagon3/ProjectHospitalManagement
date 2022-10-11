@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Control Panel</title>
+  <link rel="stylesheet" href="{% static 'css/title_bar.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/Admin_2.css' %}" />
+</head>
+
+<body>
+  {% include 'titlebar.html'%}
+  {% include 'navbar.html'%}
+  <div class="blank"></div>
+  <div class="main_container_">
+
+    <!--  Side bar list begin -->
+    <div class="left_bar_list">
+      <!-- catagory head -->
+      <div class="catagory_button" id="catagory_heading">Catagory</div>
+      <!-- catagory button list  -->
+      {% if catagory == "nurse" %}
+      <div class="catagory_button" id="active_btn">
+        <a href="" class="link_of_catagory_option">Nurse</a>
+      </div>
+      <div class="catagory_button">
+        <a href="/administrator/control-panel/word/" class="link_of_catagory_option">Word</a>
+      </div>
+
+      {% elif catagory == "word" %}
+      <div class="catagory_button">
+        <a href="/administrator/control-panel/nurse/" class="link_of_catagory_option">Nurse</a>
+      </div>
+      <div class="catagory_button" id="active_btn">
+        <a href="" class="link_of_catagory_option">Word</a>
+      </div>
+      {% else %}
+      <div class="catagory_button">
+        <a href="/administrator/control-panel/nurse/" class="link_of_catagory_option">Nurse</a>
+      </div>
+      <div class="catagory_button">
+        <a href="/administrator/control-panel/word" class="link_of_catagory_option">Word</a>
+      </div>
+      {% endif %}
+
+    </div>
+    <hr>
+    <!-- Sidebar list end -->
+    <!-- container section 
+        6 different types of container are their 
+        1. Nurse list  
+        2. New nurse add form 
+        3. Existing nurse update form 
+        4. Word list 
+        5. Nwe word update form 
+        6. Existing word update form 
+            only onle of six will display at a time    -->
+
+
+    <!-- 1. Nurse list   begin-->
+    {% if catagory == "nurse" and form_type == None %}
+    <div class="content_section" id="nurse_list">
+      <!-- heading -->
+      <div class="headLine">
+        <a class="headLineTitle">Nurse List</a>
+        <!-- <div class="addNewButton"> -->
+
+        <a class="AddNewButton" href="-1">Add New +</a>
+        <!-- </div> -->
+      </div>
+      <!-- items are generating using loop -->
+      <div class="individual_nurse_item" id="title_nurse_item">
+        <a class="ID_">ID</a>
+        <a>Name</a>
+        <a>Email</a>
+        <a style="flex:1;"></a>
+      </div>
+      <hr>
+      {% for nurse in nurses %}
+      <div class="individual_nurse_item">
+        <a class="ID_" href=""> {{nurse.user.id}}</a>
+        <a href=""> {{nurse.name}}</a>
+        <a href=""> {{nurse.email}}</a>
+        <a class="edit_" href="{{nurse.user.id}}">Edit</a>
+      </div>
+      <hr>
+      {% endfor %}
+    </div>
+    <!--  end-->
+
+    <!-- 2. New nurse add form begin-->
+    <!--  3. Existing nurse update form begin-->
+    {% elif catagory == "nurse" and form_type is not None %}
+    <div class="content_section">
+      {% include "nurs_form_admin_view.html" %}
+    </div>
+    <!--  end-->
+
+
+    <!-- 4. Word list begin-->
+    {% elif catagory == "word" and form_type == None %}
+    <div class="content_section">
+      <!-- heading -->
+      <div class="headLine">
+        <a class="headLineTitle">Word List</a>
+        <a class="AddNewButton" href="-1">Add New +</a>
+      </div>
+      <!-- item 1 -->
+      <div class="individual_nurse_item" id="title_nurse_item">
+        <a class="ID_">ID</a>
+        <a>Max Bed</a>
+        <a>Active Bed</a>
+        <a style="flex:1;"></a>
+      </div>
+      <hr>
+      {% for word in words %}
+      <div class="individual_nurse_item">
+
+        <a href="">{{word.id}}</a>
+        <a href="">{{word.MAX_BED}}</a>
+        <a href="">{{word.active_bed}}</a>
+        <a class="edit_" href="{{word.id}}">Edit</a>
+      </div>
+      <hr>
+      {% endfor %}
+    </div>
+  </div>
+  <!--  end-->
+
+
+  <!-- 5. Nwe word update form  begin-->
+  <!--  6. Existing word update form begin-->
+  {% elif catagory == "word" and form_type is not None %}
+  <div class="content_section" style="background-color: rgb(229, 254, 254); height: 100%;">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="button_bar headLine"><a>Word Update</a></div>
+      <br><br>
+      <!--MAX BED-->
+      <label for="age" id="age" class="text_of_form">Enter the maximun no of bed:</label>
+      <input type="number" class="inpuit_field" name="max_bed" placeholder="Maximum Bed" value={{word_selected.MAX_BED}}>
+      <br><br>
+      <!--Active Bed-->
+      <label for="age" id="age" class="text_of_form">Enter the number of active beds:</label>
+      <input type="positive number" class="inpuit_field" name="active_bed" placeholder="Active Bed"
+        value={{word_selected.active_bed}}>
+      <br><br>
+      <input type="submit" name="submit" id="submit1" value="Submit" style="background-color: rgb(200, 145, 252);">
+    </form>
+  </div>
+  <!--  end-->
+  {% endif %}
+  </div>
+
+</body>
+
+</html>

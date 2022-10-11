@@ -20,24 +20,19 @@
     <!-- The p is used for writing the different sub parts of the page -->
     <div class="container">
         <div class="left">
-            <div class="upper">
-                <div class="left forCenter">
-                    <img src="{% static 'images/profile_pic.png' %}" alt="Avatar woman" height="220px" width="220px"> 
-                </div>
-                <div class="right forCenter">
-                    <div>
-                        <p class="a5">Admin</p>
-                        <p class="a4">{{nurse.name}}</p>
-                        <p class="a6">License : {{nurse.license}}</p>
-                    </div>
+            <br><br>
+            <div class="forCenter">
+                <img src="{% static 'images/profile_pic.png' %}" alt="Avatar woman" height="220px" width="220px">
+            </div>
+            <br><br>
+            <div class="forCenter">
+                <div>
+                    <p class="a5">Admin</p>
+                    <p class="a4">{{nurse.name}}</p>
+                    <!-- <p class="a6">License : {{nurse.license}}</p> -->
                 </div>
             </div>
-            <div class="lower forCenter">
-                <div class="Box">
-                    <h2>Bio</h2>
-                    <p>{{nurse.bio}}</p>
-                </div>
-            </div>
+
         </div>
         <div class="right">
             <div class="upper forCenter">
@@ -62,8 +57,8 @@
             <div class="lower forCenter">
                 <!-- <from class="schedule_button_form" method="post" action="schedule"> -->
 
-                <a href="/user/nurse/schedule" class="a8">Schedule</a>
-                <a href="/user/nurse/setprofile" class="a8">Set Profile</a>
+                <a href="/administrator/nurse-schedule" class="a8">Nurse_Schedule</a>
+                <a href="/administrator/control-panel" class="a8">control-panel</a>
 
                 <!-- </from> -->
             </div>
@@ -71,7 +66,7 @@
     </div>
 
     <!-- NURSE_BOTTOM Portion -->
-    <div class="bottom">
+    <!-- <div class="bottom">
         <div class="left">
             <div class="sub">
                 <div class="box">
@@ -141,7 +136,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>

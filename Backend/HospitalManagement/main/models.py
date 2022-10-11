@@ -1,5 +1,4 @@
 
-from tokenize import blank_re
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
@@ -8,6 +7,7 @@ from django.contrib.auth.models import User
 class Nurse (models.Model):
     username = models.CharField(max_length=15)
     name = models.CharField(max_length=30)
+    age = models.IntegerField(null=True)
     profile_pic = models.ImageField(null=True)
     bio = models.TextField(null=True)
     email = models.EmailField()
