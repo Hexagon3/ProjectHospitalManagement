@@ -1,8 +1,19 @@
+
 <div style="background-color: rgb(229, 254, 254); height: 100%;">
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if message is not None %}
+    <div style="color:white; background-color:red; text-align:center;font-size:15px;">{{ message }}</div>
+    {% endif %}
+    <div class="button_bar"><a>Nurse Update</a></div>
+    <br><br>
+    
+
+
+
         <!-- update the below div class to [class="button_bar headline"] -->
         <div class="button_bar"><a>Nurse Update</a></div>
+
         <br><br>
         <!-- first name -->
         <div id="text_body">
