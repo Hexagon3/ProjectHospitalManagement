@@ -43,10 +43,10 @@
 
 #catagory_heading {
   /* heading of side bar  */
-  height: 4vh;
+  height: 5vh;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  background-color: rgb(127, 255, 242);
+  background-color: rgb(117, 240, 228);
   font-size: 20px;
 }
 
@@ -86,11 +86,12 @@
 
   /* height: 4vh; */
   display: flex;
+  height: 5vh;
   width: 100%;
   background-color: rgb(117, 240, 228);
 
-  font-size: 20px;
   text-align: center;
+  font-size: 20px;
   font-weight: bold;
   border-bottom-style: solid;
   border-color: rgb(108, 108, 108);
