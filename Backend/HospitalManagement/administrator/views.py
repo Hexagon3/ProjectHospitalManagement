@@ -12,7 +12,7 @@ def control_panel(req, catagory=None, form_type=None):
         form_type = None
         #
     if req.method == 'POST':
-        if form_type == -1:
+        if form_type == -1 and catagory == "nurse":
             username = req.POST.get("username")
             email = req.POST.get("email")
             try:
@@ -64,7 +64,7 @@ def control_panel(req, catagory=None, form_type=None):
                 n1.experience = 0
                 pass
             n1.save()
-        else:
+        elif catagory == "nurse":
             user = User.objects.get(id=form_type)
             nurse = user.nurse
             nurse.name = req.POST.get("name")
@@ -75,6 +75,21 @@ def control_panel(req, catagory=None, form_type=None):
             nurse.experience = req.POST.get("experience")
             nurse.password = req.POST.get("password")
             nurse.save()
+        elif form_type == -1 and catagory == "word":
+            MAX_BED = req.POST.get("max_bed")
+            active_bed = req.POST.get("active_bed")
+            word = Word()
+            word.MAX_BED = MAX_BED
+            word.active_bed = active_bed
+            word.save()
+
+        elif catagory == "word":
+            MAX_BED = req.POST.get("max_bed")
+            active_bed = req.POST.get("active_bed")
+            word = Word.objects.get(id=form_type)
+            word.MAX_BED = MAX_BED
+            word.active_bed = active_bed
+
         return redirect("/administrator/control-panel")
 
     context = {
@@ -98,4 +113,4 @@ def profile(req):
 
 
 def nurse_schedule(req):
-    pass
+    return render(req, 'nurse_schedule.html')

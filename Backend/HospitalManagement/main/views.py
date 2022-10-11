@@ -61,15 +61,17 @@ def signup(req):
             email = req.POST.get("email")
             passwd = req.POST.get('password')
             try:
-                nurse = Nurse.objects.get(email=email)
+                user = User.objects.get(email=email)
             except:
                 context = {"message":
                            {'failed': True, "reason": "This Email is not registered. Please Check"}}
                 return render(req, "member_login.html", context=context)
-            user = nurse.user  # authenticate(request)
+
+            # authenticate(request)
             if user.check_password(passwd):
                 print(user)
                 login(req, user)
+
                 return redirect("/")
             else:
                 context = {'message': {'failed': True,

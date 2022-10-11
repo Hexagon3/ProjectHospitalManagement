@@ -7,5 +7,6 @@ urlpatterns = [
     path('control-panel/<str:catagory>/', control_panel),
     path('control-panel/', control_panel),
     path('profile', profile),
+    path('nurse-schedule', nurse_schedule),
     path('schedule', nurse_schedule),
 ]
