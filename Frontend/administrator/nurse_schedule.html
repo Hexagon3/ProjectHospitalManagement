@@ -1,1 +1,48 @@
-Nurse Schedule
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="{% static 'css/title_bar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nurse_schedule.css' %}" />
+
+</head>
+
+<body>
+
+    {% include 'titlebar.html'%}
+    {% include 'navbar.html'%}
+    <div class="blank"></div>
+    <div class="MainContainer">
+        <div class="Margin"></div>
+        <div class="ScheduleList">
+            <div class="ScheduleListcontent" id="Title">
+
+                <div class="IndividualItem">Nurse ID</div>
+                <div class="IndividualItem">Nurse Name</div>
+                <div class="IndividualItem">Shift</div>
+                <div class="IndividualItem">Time</div>
+                <div class="IndividualItem">No of Duty</div>
+
+            </div>
+            <hr>
+            {% for nurse in nurses %}
+            <div class="ScheduleListcontent">
+                <div class="IndividualItem">{{nurse.user.id}}</div>
+                <div class="IndividualItem">{{nurse.name}}</div>
+                <div class="IndividualItem">{{nurse.shift}}</div>
+                <div class="IndividualItem">{{52.60}}</div>
+                <div class="IndividualItem">{{nurse.cost}}</div>
+            </div>
+            <hr>
+            {% endfor %}
+
+        </div>
+        <div class="Margin"></div>
+    </div>
+
+</body>
+
+</html>

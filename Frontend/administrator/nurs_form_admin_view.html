@@ -1,18 +1,17 @@
-
 <div style="background-color: rgb(229, 254, 254); height: 100%;">
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% if message is not None %}
-    <div style="color:white; background-color:red; text-align:center;font-size:15px;">{{ message }}</div>
-    {% endif %}
-    <div class="button_bar"><a>Nurse Update</a></div>
-    <br><br>
-    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if message is not None %}
+        <div style="color:white; background-color:red; text-align:center;font-size:15px;">{{ message }}</div>
+        {% endif %}
+
+
 
 
 
         <!-- update the below div class to [class="button_bar headline"] -->
-        <div class="button_bar"><a>Nurse Update</a></div>
+
+        <div class="button_bar  headLine"><a>Nurse Update</a></div>
 
         <br><br>
         <!-- first name -->
@@ -24,7 +23,7 @@
             <label for="name" id="name" class="text_of_form">Name:</label>
             <input type="text" class="inpuit_field" name="name" placeholder="name" value="{{nurse_selected.name}}">
             <br><br>
-    
+
             <!-- mail -->
             <label for="email" id="email" class="text_of_form">mail id.</label>
             <input type="email" name="email" class="inpuit_field" placeholder="enter correct one"
@@ -32,16 +31,16 @@
             <br><br>
             <!-- pw1 as text -->
             <label for="password" id="password" class="text_of_form">enter a strong password:</label>
-            <input type="text" class="inpuit_field" placeholder="enter the password" name="password1" value="{{password}}"
-                required>
+            <input type="text" class="inpuit_field" placeholder="enter the password" name="password1"
+                value="{{password}}" required>
             <br><br>
-    
+
             <!-- age -->
             <label for="age" id="age" class="text_of_form">enter your age:</label>
             <input type="number" class="inpuit_field" name="age" placeholder="age" value={{nurse_selected.age}}>
             <br><br>
             <!-- phn no -->
-    
+
             <label for="phn_no" id="phn_no" class="text_of_form">phn no:</label>
             <input type="number" class="inpuit_field" name="phn_no" placeholder="phn no."
                 value={{nurse_selected.contact_no}}>
@@ -69,15 +68,17 @@
             <label for="duration" id="duration" class="text_of_form">enter the experience:</label>
             <input type="number" class="inpuit_field" placeholder="in year" name="experience">
             <br><br>
-    
+
             <!-- reset and submit button -->
             <div class="submit_btn_container">
                 {% if nurse_selected is not None %}
                 <input type="submit" name="submit" id="submit1" value="Update">
                 <input type="submit" name="submit" id="submit2" value="Delete">
                 {% else %}
-                <input type="submit" name="submit" id="submit1" value="Create" style="background-color: rgb(200, 145, 252);">
-                <input type="submit" name="submit" id="submit2" value="Submit" style="background-color: rgb(200, 145, 252);"> 
+                <input type="submit" name="submit" id="submit1" value="Create"
+                    style="background-color: rgb(200, 145, 252);">
+                <input type="submit" name="submit" id="submit2" value="Submit"
+                    style="background-color: rgb(200, 145, 252);">
                 {% endif %}
             </div>
         </div>

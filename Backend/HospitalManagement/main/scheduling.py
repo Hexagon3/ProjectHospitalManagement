@@ -6,16 +6,16 @@ MAX_HANDLE_PATIENT = 3
 
 
 def nurse_schedule():
-    array_of_nurse = Nurse.objects.all().order_by('cost').values()
+    array_of_nurse = Nurse.objects.all().order_by('cost')
     array_of_nurse = np.array(array_of_nurse)
     array_of_word = Word.objects.all()
     # array_of_word = np.array(array_of_word)
 
     for word in array_of_word:
         if word.active_bed % MAX_HANDLE_PATIENT == 0:
-            no_nurse = word.active_bed/MAX_HANDLE_PATIENT
+            no_nurse = word.active_bed//MAX_HANDLE_PATIENT
         else:
-            no_nurse = word.active_bed/MAX_HANDLE_PATIENT
+            no_nurse = word.active_bed//MAX_HANDLE_PATIENT
 
         for i in range(0, no_nurse, 3):
             nurse1 = array_of_nurse[i]

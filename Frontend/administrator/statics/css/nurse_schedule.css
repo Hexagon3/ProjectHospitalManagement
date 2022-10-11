@@ -1,0 +1,33 @@
+.blank {
+    height: 88px;
+}
+
+.MainContainer {
+    display: flex;
+}
+
+.ScheduleList {
+    flex: 10;
+}
+
+.Margin {
+    flex: 1;
+}
+
+.IndividualItem {
+    padding: 5px 50px;
+    flex: 1;
+}
+
+#Title {
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.ScheduleListcontent {
+    display: flex;
+
+    font-size: 15px;
+    justify-content: center;
+}

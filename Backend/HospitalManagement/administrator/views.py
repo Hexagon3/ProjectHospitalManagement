@@ -2,6 +2,7 @@
 from tokenize import Special
 from django.shortcuts import render, redirect
 from main.models import Nurse, Word, User
+from main.scheduling import nurse_schedule
 # Create your views here.
 
 
@@ -42,27 +43,19 @@ def control_panel(req, catagory=None, form_type=None):
                 username=username, email=email, password=password)
             n1 = Nurse(username=username, email=email, name=username,
                        user=user)
-            try:
-                n1.name = name
-            except:
+            if name == "":
                 n1.name = n1.username
             try:
-                n1.age = age
+                n1.age = int(age)
             except:
                 n1.age = -1
+            n1.contact_no = contact_no
+            n1.department = department
             try:
-                n1.contact_no = contact_no
-            except:
-                n1.contact_no = "None"
-            try:
-                n1.department = department
-            except:
-                n1.department = "None"
-            try:
-                n1.experience = experience
+                n1.experience = int(experience)
             except:
                 n1.experience = 0
-                pass
+
             n1.save()
         elif catagory == "nurse":
             user = User.objects.get(id=form_type)
@@ -112,5 +105,9 @@ def profile(req):
     return render(req, 'AdminsProfile.html')
 
 
-def nurse_schedule(req):
-    return render(req, 'nurse_schedule.html')
+def nurse_schedule_display(req):
+    # nurse_schedule()
+    context = {
+        'nurses': Nurse.objects.all(),
+    }
+    return render(req, 'nurse_schedule.html', context=context)
