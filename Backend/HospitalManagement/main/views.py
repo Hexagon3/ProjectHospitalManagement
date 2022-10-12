@@ -13,7 +13,8 @@ def home(req: HttpRequest):
     # logout(User.objects.get(username='admin'))
 
     user = {'logedin': req.user.is_authenticated}
-    context = {'user': user}
+    context = {'user': user,
+   'is_superuser':req.user.is_superuser }
     return render(req, "home.html", context=context)
 
 

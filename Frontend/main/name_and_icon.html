@@ -18,10 +18,10 @@
             </div>
             <div class="login-signup">
                 <div class="login-button">
-                    {% if req.user.is_superuser %}
-                    <a href="/user/nurse/profile">Profile</a>
-                    {% else %}
+                    {% if is_superuser %}
                     <a href="/administrator/profile">Profile</a>
+                    {% else %}
+                    <a href="/user/nurse/profile">Profile</a>
                     {% endif %}
                 </div>
             </div>
