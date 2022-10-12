@@ -23,7 +23,7 @@
                 <div class="IndividualItem">Nurse ID</div>
                 <div class="IndividualItem">Nurse Name</div>
                 <div class="IndividualItem">Shift</div>
-                <div class="IndividualItem">Time</div>
+                <div class="IndividualItem">Word</div>
                 <div class="IndividualItem">No of Duty</div>
 
             </div>
@@ -33,7 +33,11 @@
                 <div class="IndividualItem">{{nurse.user.id}}</div>
                 <div class="IndividualItem">{{nurse.name}}</div>
                 <div class="IndividualItem">{{nurse.shift}}</div>
-                <div class="IndividualItem">{{52.60}}</div>
+                {% if nurse.allocated_word < 0 %}
+                <div class="IndividualItem">Not Set</div>
+                {% else %}
+                <div class="IndividualItem">{{nurse.allocated_word}}</div>
+                {% endif %}
                 <div class="IndividualItem">{{nurse.cost}}</div>
             </div>
             <hr>
